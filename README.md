@@ -1,4 +1,4 @@
-﻿# Traduções PT-BR
+# Traduções PT-BR
 Este é um pacote com traduções de vários mods, ele será atualizado a medida que muitos mods forem traduzidos! Sugestões de mods a serem traduzidos podem ser feitas a qualquer momento!
 
 This project aims to gather original translations for various mods I've submitted and expand that collection. Many of the listed mods already have a Brazilian Portuguese localization, but some, due to delays in approving suggestions, end up without a translation. The intention of this project is to create translations and leave the decision of officially integrating them to the mod author.

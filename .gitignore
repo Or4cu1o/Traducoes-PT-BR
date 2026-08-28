@@ -1,0 +1,26 @@
+# Pacotes de release gerados por tools/build_release.py
+/dist/
+/build/
+
+# Nenhum .zip deve entrar no repositório (mods baixados, exports, backups)
+*.zip
+
+# Artefatos temporários e de sistema
+*.tmp
+*.bak
+*.orig
+*.rej
+.DS_Store
+Thumbs.db
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python (tools/)
+__pycache__/
+*.pyc
+.venv/
+venv/

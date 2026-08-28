@@ -1,0 +1,17 @@
+# Normalização de fim de linha — o motor do Factorio lê .cfg como texto simples
+# e o repositório é mantido em LF para diffs estáveis entre colaboradores.
+* text=auto eol=lf
+
+*.cfg   text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.lua   text eol=lf
+*.py    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+
+# Binários — nunca normalizar nem tentar diff textual.
+*.png   binary
+*.jpg   binary
+*.zip   binary

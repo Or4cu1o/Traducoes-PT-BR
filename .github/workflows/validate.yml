@@ -1,0 +1,39 @@
+name: validate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Glossário sincronizado
+        run: python3 tools/build_glossary.py --check
+
+      - name: Locales pt-BR válidos
+        run: python3 tools/validate_locale.py locale/pt-BR
+
+      - name: info.json é JSON válido
+        run: python3 -m json.tool info.json > /dev/null
+
+      - name: changelog.txt no formato do Factorio
+        run: python3 tools/check_changelog.py changelog.txt
+
+      - name: Tabela de mods do README sincronizada
+        run: python3 tools/gen_mods_table.py --check
+
+      - name: Sem CRLF / BOM em arquivos de texto
+        run: |
+          set -e
+          bad=$(git grep -lI $'\r' -- '*.cfg' '*.json' '*.md' '*.txt' '*.lua' || true)
+          if [ -n "$bad" ]; then echo "CRLF encontrado em:"; echo "$bad"; exit 1; fi
+          bad=$(git grep -lI $'\xef\xbb\xbf' -- '*.cfg' '*.json' '*.md' '*.txt' || true)
+          if [ -n "$bad" ]; then echo "BOM encontrado em:"; echo "$bad"; exit 1; fi
