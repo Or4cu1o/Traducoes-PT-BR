@@ -104,13 +104,21 @@ def check_markers(name: str, lineno: int, value: str, rep: Report) -> None:
                       f"perto de {m.group(0)!r}")
 
 
+# Remove rich-text/tag ([entity=inserter], [img=...], [font=...]), marcadores e
+# trechos entre aspas antes do lint de glossário — ali "inserter" é nome de
+# protótipo ou nome próprio, não texto traduzível.
+_RICHTEXT_RE = re.compile(r"\[[^\]\n]*\]|__[A-Za-z0-9_]+__|\"[^\"\n]*\"")
+
+
 def glossary_lint(name: str, lineno: int, value: str, rep: Report) -> None:
+    prose = _RICHTEXT_RE.sub(" ", value)
     for en, pt in _LINT_TERMS.items():
-        if re.search(r"\b" + re.escape(en) + r"\b", value, re.IGNORECASE):
-            if pt.lower() in value.lower():
-                continue
-            rep.warn(name, f"linha {lineno}: contém {en!r} em inglês "
-                           f"(glossário: {pt!r})")
+        if not re.search(r"\b" + re.escape(en) + r"\b", prose, re.IGNORECASE):
+            continue
+        if pt.lower() in prose.lower():
+            continue
+        rep.warn(name, f"linha {lineno}: contém {en!r} em inglês "
+                       f"(glossário: {pt!r})")
 
 
 def parse_cfg(path: str, rep: Report) -> dict:
@@ -138,7 +146,8 @@ def parse_cfg(path: str, rep: Report) -> dict:
             rep.err(name, f"linha {i}: linha sem '=' e sem cabeçalho de seção")
             continue
         if section is None:
-            rep.warn(name, f"linha {i}: chave antes da primeira seção")
+            # chaves antes de qualquer [seção] caem na seção padrão do Factorio;
+            # é um uso válido e comum (mensagens referenciadas sem prefixo).
             section = ""
         key, value = line.split("=", 1)
         key = key.strip()
@@ -154,9 +163,20 @@ def parse_cfg(path: str, rep: Report) -> dict:
     return out
 
 
-def _mod_stem(fname: str) -> str:
-    s = re.sub(r"\.cfg$", "", fname, flags=re.I)
-    s = re.sub(r"\s*-\s*[a-z-]+$", "", s, flags=re.I)
+_CATEGORY_SUFFIX = re.compile(
+    r"\s+-\s+(item-name|item-description|entity-name|entity-description|"
+    r"recipe-name|recipe-description|technology-name|technology-description|"
+    r"tech|mod|misc|locale|names|quality-names)$", re.I)
+_VERSION_SUFFIX = re.compile(r"_[0-9]+(?:\.[0-9]+)+$")
+
+
+def _mod_stem(name: str) -> str:
+    """Slug de mod comparável entre fontes. Só remove o sufixo ' - <categoria>'
+    (convenção de arquivos divididos do repo) e o sufixo de versão de diretório;
+    nunca corta segmentos legítimos do nome (ex.: '-planets')."""
+    s = re.sub(r"\.cfg$", "", name, flags=re.I)
+    s = _CATEGORY_SUFFIX.sub("", s)
+    s = _VERSION_SUFFIX.sub("", s)
     return s.strip().lower().replace(" ", "-").replace("_", "-")
 
 
@@ -183,25 +203,65 @@ def _read_keys(path: str) -> list:
     return out
 
 
+PACK_DIRS = {"AAI-Language-Pack", "LTN-Language-Pack", "boblocale"}
+IGNORE_DIRS = {"factorio-mods-localization"}
+
+
 def load_reference(source_mods: str) -> tuple:
-    """Retorna (en_por_stem, oficial_ptbr_por_stem) a partir de _source_mods/."""
+    """Retorna (en_por_stem, oficial_ptbr_por_stem).
+
+    `en`      : templates em inglês de qualquer mod em _source_mods/.
+    `official`: pt-BR APENAS dos três pacotes de idioma (AAI/LTN/bob). O pt-BR
+               que um mod traz no próprio repo NÃO conta como "oficial" — ali
+               a ordem de carga resolve a sobreposição, e completá-lo é o
+               objetivo do projeto.
+    """
     en: dict = {}
     official: dict = {}
-    packs = {"AAI-Language-Pack", "LTN-Language-Pack", "boblocale"}
     for entry in sorted(os.listdir(source_mods)):
         base = os.path.join(source_mods, entry)
-        if not os.path.isdir(base):
+        if not os.path.isdir(base) or entry in IGNORE_DIRS:
             continue
-        is_pack = entry in packs
-        for lang, bucket in (("en", en), ("pt-BR", official), ("pt", official)):
-            for path in glob.glob(os.path.join(base, "**", "locale", lang, "*.cfg"),
-                                  recursive=True):
+        is_pack = entry in PACK_DIRS
+        langs = [("en", en)]
+        if is_pack:
+            langs += [("pt-BR", official), ("pt", official)]
+        for lang, bucket in langs:
+            for path in glob.glob(
+                    os.path.join(base, "**", "locale", lang, "*.cfg"),
+                    recursive=True):
                 stem = (_mod_stem(os.path.basename(path)) if is_pack
-                        else _mod_stem(re.sub(r"_[0-9.]+$", "", entry)))
+                        else _mod_stem(entry))
                 keyset = bucket.setdefault(stem, set())
                 for ln in _read_keys(path):
                     keyset.add(ln)
     return en, official
+
+
+def fix_mechanical(path: str) -> list:
+    """Corrige só o que é seguro e determinístico: BOM, CRLF, espaço à direita,
+    quebra de linha final única. Retorna a lista de correções aplicadas."""
+    with open(path, "rb") as fh:
+        raw = fh.read()
+    fixes = []
+    if raw.startswith(b"\xef\xbb\xbf"):
+        raw = raw[3:]
+        fixes.append("BOM removido")
+    if b"\r" in raw:
+        raw = raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+        fixes.append("CRLF -> LF")
+    text = raw.decode("utf-8")
+    lines = text.split("\n")
+    rstripped = [ln.rstrip(" \t") for ln in lines]
+    if rstripped != lines:
+        fixes.append("espaço à direita removido")
+    new = "\n".join(rstripped).rstrip("\n") + "\n"
+    if new != "\n".join(rstripped):
+        fixes.append("quebra de linha final normalizada")
+    if new != text or fixes:
+        with open(path, "w", encoding="utf-8", newline="\n") as fh:
+            fh.write(new)
+    return fixes
 
 
 def main(argv: list) -> int:
@@ -209,6 +269,9 @@ def main(argv: list) -> int:
     ap.add_argument("locale_dir", help="diretório com os .cfg (ex.: locale/pt-BR)")
     ap.add_argument("--strict", action="store_true",
                     help="tratar avisos como erros")
+    ap.add_argument("--fix", action="store_true",
+                    help="corrige automaticamente BOM, CRLF, espaço à direita e "
+                         "quebra de linha final antes de validar")
     ap.add_argument("--source-mods", metavar="DIR",
                     help="raiz de _source_mods/ para checar cobertura e "
                          "não-sobreposição com os pacotes oficiais")
@@ -218,6 +281,15 @@ def main(argv: list) -> int:
     if not files:
         print(f"ERRO: nenhum .cfg em {args.locale_dir}", file=sys.stderr)
         return 1
+
+    if args.fix:
+        n_fixed = 0
+        for path in files:
+            done = fix_mechanical(path)
+            if done:
+                n_fixed += 1
+                print(f"CORRIGIDO {os.path.relpath(path, REPO)}: {', '.join(done)}")
+        print(f"{n_fixed} arquivo(s) corrigido(s).\n")
 
     rep = Report()
     parsed: dict = {}

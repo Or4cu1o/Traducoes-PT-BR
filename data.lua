@@ -48,7 +48,6 @@ if mods["canal-excavator"] ~= nil and mods["pelagos"] == nil then
     data.raw.technology["canex-excavator"].localised_description =
         {"technology-description.slondo-ptbr-canex-excavator"}
 
-    data.raw.item["canex-excavator"].localised_name = {"item-name.slondo-ptbr-canex-excavator"}
     data.raw.item["canex-excavator"].localised_name = {"entity-name.slondo-ptbr-canex-excavator"}
     data.raw.recipe["canex-excavator"].localised_name = {"recipe-name.slondo-ptbr-canex-excavator"}
 end
