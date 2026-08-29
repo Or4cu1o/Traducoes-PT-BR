@@ -277,3 +277,25 @@ Com o lançamento oficial do mod em `11/11/2025`, o planejado é estar enviando 
 
 _Total: 232 mods. Gerado de `mods.csv` por `tools/gen_mods_table.py`._
 <!-- MODS-TABLE:END -->
+
+# 🙏 Créditos e agradecimentos
+
+Este pacote consolida e amplia o trabalho de vários projetos de localização. A
+tradução de cada mod segue a hierarquia descrita em `CLAUDE.md`: primeiro as
+traduções já finalizadas nesses projetos, depois o que o próprio mod entrega e,
+por último, tradução nova revisada contra o glossário canônico.
+
+| Projeto | Autoria | Referência |
+|---|---|---|
+| **AAI Language Pack** | Astorin + tradutores da comunidade no Crowdin | [portal](https://mods.factorio.com/mod/AAI_Language_Pack) · [repo](https://github.com/Astorin/AAI-Language-Pack) · [Crowdin](https://crowdin.com/project/factorio-mods-localization) |
+| **LTN Language Pack** | Astorin + tradutores da comunidade no Crowdin | [portal](https://mods.factorio.com/mod/LTN_Language_Pack) · [repo](https://github.com/Astorin/LTN-Language-Pack) · [Crowdin](https://crowdin.com/project/factorio-mods-localization) |
+| **Bob's Locale Translations** | Karosieben + tradutores no Crowdin | [portal](https://mods.factorio.com/mod/boblocale) · [repo](https://github.com/Karosieben/boblocale) · [Crowdin](https://crowdin.com/project/boblocale) |
+| **YKR - Mods Traduzidos PTBR** | duhyukora | [portal](https://mods.factorio.com/mod/YKR_PTBR) |
+
+Convivência com os pacotes oficiais é estrutural: este pacote **nunca** emite
+uma chave que o AAI/LTN Language Pack ou o Bob's Locale já traduzam em pt-BR —
+apenas preenche as lacunas. Assim a ordem de carga é irrelevante e não há
+dependência sobre esses pacotes no `info.json`.
+
+Coordenação desta expansão e manutenção do repositório: **[Or4cu1o](https://github.com/Or4cu1o)**.
+Autoria original do mod: **Slondo**.

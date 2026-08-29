@@ -16,6 +16,7 @@ Date: 28/08/2026
     - Saneamento dos arquivos .cfg existentes: quebra de linha final, remoção de espaços à direita, ausência de BOM e de CRLF.
   Info:
     - mods.csv e a tabela do README.md regenerados a partir de uma única fonte (mods.csv), com versão-base, autoria e data de entrada de cada mod.
+    - Agradecimentos aos projetos de tradução usados como base: AAI Language Pack e LTN Language Pack (Astorin, via Crowdin factorio-mods-localization), Bob's Locale Translations (Karosieben) e YKR - Mods Traduzidos PTBR (duhyukora); e a Or4cu1o pela coordenação desta expansão.
     - Limitações conhecidas: o mod "RPM-RW Kernbohrer" não possui localização de origem em inglês (template em alemão) e ficou fora do pacote; cerca de 65 chaves de 5 micro-mods deslistados do portal não puderam ser recuperadas.
 
 ---------------------------------------------------------------------------------------------------
