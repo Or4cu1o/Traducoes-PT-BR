@@ -168,6 +168,13 @@ espelho fiel do Crowdin; para o restante do projeto, usar a API do Crowdin ou o
 `locale/pt-BR/` do repositório de cada mod. **Nada é copiado às cegas**: toda
 string passa pelo validador (marcadores, glossário, capitalização).
 
+`tools/ingest_sources.py` faz essa ingestão dos espelhos AAI/LTN: para cada
+chave que o pacote traduz em pt-BR e que existe no `en` dele, copia o valor
+**verbatim** (marcador conferido; contagem de `__N__` igual à do `en`). Chaves
+fora do `en` do pacote são ignoradas (defasadas). `boblocale` fica de fora
+(chaves defasadas para 2.0) — os mods Bob's entram pelo `locale/pt-BR/` de cada
+zip + pipeline por mod.
+
 **Fonte secundária — IA multiagente.** Para as chaves que faltam no Crowdin:
 
 1. Lote de chaves (texto `en`, seção, mod, glossário aplicável, contexto irmão).
