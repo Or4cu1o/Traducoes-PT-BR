@@ -30,10 +30,13 @@ jobs:
       - name: Tabela de mods do README sincronizada
         run: python3 tools/gen_mods_table.py --check
 
+      - name: Empacotamento (dry-run)
+        run: python3 tools/build_release.py --target 2.0 --dry-run
+
       - name: Sem CRLF / BOM em arquivos de texto
         run: |
           set -e
-          bad=$(git grep -lI $'\r' -- '*.cfg' '*.json' '*.md' '*.txt' '*.lua' || true)
+          bad=$(git grep -lI $'\r' -- '*.cfg' '*.json' '*.md' '*.txt' '*.lua' '*.py' '*.yml' || true)
           if [ -n "$bad" ]; then echo "CRLF encontrado em:"; echo "$bad"; exit 1; fi
-          bad=$(git grep -lI $'\xef\xbb\xbf' -- '*.cfg' '*.json' '*.md' '*.txt' || true)
+          bad=$(git grep -lI $'\xef\xbb\xbf' -- '*.cfg' '*.json' '*.md' '*.txt' '*.lua' '*.py' '*.yml' || true)
           if [ -n "$bad" ]; then echo "BOM encontrado em:"; echo "$bad"; exit 1; fi
