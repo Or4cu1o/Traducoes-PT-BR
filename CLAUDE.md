@@ -124,6 +124,19 @@ portal permite publicar variantes por versão de jogo. Mantemos **um único**
 O conteúdo de `locale/` é idêntico entre as variantes; só muda o
 `factorio_version` no `info.json` empacotado.
 
+### Passo a passo de publicação das duas variantes
+
+1. `python3 tools/build_release.py --target 2.0` → `dist/slondo-ptbr_<versão>.zip`
+   com `factorio_version: "2.0"`.
+2. Publicar esse `.zip` no portal (https://mods.factorio.com/mod/slondo-ptbr,
+   aba *Downloads* → *Upload*). O portal aceita o upload como release da versão
+   corrente do mod para jogos 2.0.
+3. `python3 tools/build_release.py --target 2.1` → regenera o mesmo
+   `dist/slondo-ptbr_<versão>.zip` agora com `factorio_version: "2.1"`.
+4. Publicar esse segundo `.zip` no portal como a variante 2.1 da mesma versão
+   do mod. Só executar quando o ecossistema de mods de origem migrar para 2.1.
+5. `dist/` é git-ignored: os `.zip` nunca entram em commit.
+
 ## 10. Limites
 
 - O repositório Git é **apenas** este diretório. Nada de `_downloads/`,
