@@ -28,32 +28,47 @@ data.lua                        # overrides condicionais de nome/descrição
   alvo está presente (`mods["x"] ~= nil`) ou ausente, para não colidir com
   traduções que o próprio mod já traga.
 
-## 3. Política de convivência — "oficial vence, só preenchemos lacunas"
+## 3. Modelo de convivência — autônomo + _fallback_ com prioridade nativa
+
+O pacote é **autônomo**: `locale/pt-BR/` cobre **todas** as chaves do
+ecossistema, inclusive os conteúdos de AAI, LTN e Bob's. O jogador não precisa
+de nenhum outro pacote de idioma para jogar em pt-BR.
 
 Os pacotes **AAI Language Pack**, **LTN Language Pack** e **Bob's Locale**
-usam o Crowdin e têm prioridade. Como não há como carregar depois deles sem
-depender deles, a convivência é garantida **estruturalmente**:
+(mantidos pela comunidade via Crowdin, revisão humana, atualização contínua)
+devem ter **prioridade** onde houver sobreposição. Como o Factorio não permite
+"carregar depois" de um mod de terceiros sem depender dele — e depender deles
+inverteria a ordem —, a prioridade é garantida por **paridade de texto**:
 
-1. **Nunca** enviar uma chave que já exista em pt-BR nesses pacotes.
-2. **Nunca** declarar dependência (`?` ou `!`) desses pacotes no `info.json`.
-3. Assim a ordem de carga é irrelevante: só há sobreposição nas chaves que
-   nós *não* emitimos.
+1. Toda chave que um desses três pacotes traduz em pt-BR é emitida por nós como
+   **cópia fiel** do texto atual do pacote (mesma origem: Crowdin
+   `factorio-mods-localization` / `boblocale`). Assim, tanto faz qual carrega
+   por último — o texto é o mesmo.
+2. **Nunca** declarar dependência (`?`, `(?)` ou `!`) desses pacotes no
+   `info.json` (não forçar ordem de carga).
+3. Onde o pacote nativo receber uma correção depois do nosso _snapshot_, a
+   divergência é resolvida na próxima release nossa (re-sincronizando do
+   Crowdin). O _delta_ até lá é pequeno e apenas em chaves aprovadas.
+4. Overrides de protótipo em `data.lua` para esses ecossistemas **devem** ser
+   protegidos com `if not mods["<pack>"] then ... end` (ver `data.lua`).
 
-`tools/validate_locale.py` reprova qualquer chave nossa que coincida com a
-versão pt-BR oficial correspondente em `_source_mods/*Language-Pack/` ou
-`_source_mods/boblocale/`.
+`tools/validate_locale.py --source-mods DIR --standalone` verifica isso: uma
+chave nossa que coincida com o pt-BR de um dos três pacotes é **permitida**
+desde que o valor seja idêntico (cópia fiel); se o texto divergir, é **erro**.
+Sem `--standalone`, qualquer coincidência é erro (modo legado "só lacunas").
 
 ## 4. Hierarquia de origem por chave (estrita)
 
 Para cada chave faltante, usar a primeira fonte disponível:
 
 1. Tradução **finalizada/aprovada** no Crowdin `factorio-mods-localization`
-   ou `boblocale`.
+   ou `boblocale` (fonte primária — ver §11).
 2. pt-BR **upstream** do próprio mod (repo/portal).
-3. **YKR_PTBR** (após sanitização terminológica).
+3. **YKR_PTBR** (após sanitização terminológica; nunca importado às cegas).
 4. Tradução **já existente** neste repositório.
-5. Tradução **nova** (rascunho com apoio de IA → glossário → validador →
-   revisão humana). Registrar como "IA" na matriz de cobertura.
+5. Tradução **nova** pelo pipeline IA multiagente (§11): rascunho → revisão em
+   _loop_ → glossário → validador → amostragem humana. Registrar como "IA" na
+   matriz de cobertura.
 
 > Estado observado (Ago/2026): o Crowdin `factorio-mods-localization` está
 > ~10% traduzido para pt-BR e ~0% aprovado. Os clones em
@@ -143,3 +158,37 @@ O conteúdo de `locale/` é idêntico entre as variantes; só muda o
   `_source_mods/`, `_translates/`, `docs/` entra em _commits_.
 - Sem `.zip`, arquivos temporários ou `dist/` versionados (ver `.gitignore`).
 - Não abrir PR upstream sem aprovação explícita do mantenedor.
+
+## 11. Pipeline de tradução (Crowdin + IA multiagente)
+
+**Fonte primária — Crowdin.** Extrair o pt-BR **aprovado** do projeto
+`factorio-mods-localization` (e `boblocale` para os mods Bob's). Os clones em
+`_source_mods/AAI-Language-Pack/`, `LTN-Language-Pack/` e `boblocale/` são
+espelho fiel do Crowdin; para o restante do projeto, usar a API do Crowdin ou o
+`locale/pt-BR/` do repositório de cada mod. **Nada é copiado às cegas**: toda
+string passa pelo validador (marcadores, glossário, capitalização).
+
+**Fonte secundária — IA multiagente.** Para as chaves que faltam no Crowdin:
+
+1. Lote de chaves (texto `en`, seção, mod, glossário aplicável, contexto irmão).
+2. `agy -p "<prompt estruturado>"` → rascunho **Gemini** (chamadas
+   **sequenciais**, com _rate-limit_).
+3. Revisão **Claude Sonnet 5** contra glossário + marcadores + semântica do
+   `en` → aceitar ou revisar.
+4. _Loop_ 2–3 até estabilizar; grava em _staging_ e roda
+   `validate_locale.py --strict`.
+5. **Amostragem humana por mod** antes do _merge_ (padrão "revisão por mod").
+
+Progresso resumível em `docs/_auditoria/` (fora do repositório publicado).
+
+## 12. Arquitetura do modelo
+
+| Tipo de pack | Origem / método | Revisão | Ciclo | Papel |
+|---|---|---|---|---|
+| **Packs nativos** (AAI/LTN/Bob's Locale) | Manual / Crowdin (humanos) | Alta | Contínuo | **Prioridade máxima** onde houver sobreposição |
+| **Este pack** | Automatizado (Crowdin + IA, §11) | Média/alta (sintética + amostragem) | Semestral | **Autônomo / _fallback_** — cobre 100% das lacunas |
+
+A prioridade dos packs nativos é obtida por **paridade de texto** (§3), não por
+ordem de carga: `slondo-ptbr` carrega por último, mas nas chaves em comum o
+texto é idêntico ao do pack nativo. Sem `rename` do mod e sem dependência dos
+packs no `info.json`.

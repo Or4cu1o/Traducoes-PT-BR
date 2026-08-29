@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenera a tabela de mods do README.md a partir de mods.csv.
+"""Regenera a tabela de mods do MODS.md a partir de mods.csv.
 
 mods.csv (cabeçalho): Supported,Mod Version,Mod,Author(s),Released
   - Supported  : versão do pacote em que o mod passou a ser suportado (ex.: V1.0.4)
@@ -8,12 +8,12 @@ mods.csv (cabeçalho): Supported,Mod Version,Mod,Author(s),Released
   - Author(s)  : autoria do mod
   - Released   : data (DD/MM/AAAA) da entrada no pacote
 
-A tabela é escrita no README.md entre os marcadores:
+A tabela é escrita no MODS.md entre os marcadores:
     <!-- MODS-TABLE:START -->
     <!-- MODS-TABLE:END -->
 
 Uso:
-    python3 tools/gen_mods_table.py            # atualiza o README.md
+    python3 tools/gen_mods_table.py            # atualiza o MODS.md
     python3 tools/gen_mods_table.py --check    # falha se estiver defasado
     python3 tools/gen_mods_table.py --stdout   # só imprime a tabela
 """
@@ -25,7 +25,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 CSV_PATH = os.path.join(REPO, "mods.csv")
-README = os.path.join(REPO, "README.md")
+TARGET = os.path.join(REPO, "MODS.md")
 START = "<!-- MODS-TABLE:START -->"
 END = "<!-- MODS-TABLE:END -->"
 
@@ -46,12 +46,12 @@ def build_table() -> str:
     return "\n".join(out)
 
 
-def splice(readme_text: str, table: str) -> str:
-    if START not in readme_text or END not in readme_text:
+def splice(doc_text: str, table: str) -> str:
+    if START not in doc_text or END not in doc_text:
         raise SystemExit(
-            f"ERRO: marcadores {START} / {END} ausentes no README.md")
-    pre = readme_text.split(START)[0]
-    post = readme_text.split(END)[1]
+            f"ERRO: marcadores {START} / {END} ausentes no MODS.md")
+    pre = doc_text.split(START)[0]
+    post = doc_text.split(END)[1]
     return f"{pre}{START}\n{table}\n{END}{post}"
 
 
@@ -60,19 +60,19 @@ def main(argv: list) -> int:
     if "--stdout" in argv:
         print(table)
         return 0
-    with open(README, "r", encoding="utf-8") as fh:
+    with open(TARGET, "r", encoding="utf-8") as fh:
         current = fh.read()
     updated = splice(current, table)
     if "--check" in argv:
         if current != updated:
-            print("ERRO: tabela do README.md defasada. Rode "
+            print("ERRO: tabela do MODS.md defasada. Rode "
                   "`python3 tools/gen_mods_table.py`.", file=sys.stderr)
             return 1
-        print("OK: tabela do README.md sincronizada com mods.csv.")
+        print("OK: tabela do MODS.md sincronizada com mods.csv.")
         return 0
-    with open(README, "w", encoding="utf-8") as fh:
+    with open(TARGET, "w", encoding="utf-8") as fh:
         fh.write(updated)
-    print("README.md atualizado a partir de mods.csv.")
+    print("MODS.md atualizado a partir de mods.csv.")
     return 0
 
 

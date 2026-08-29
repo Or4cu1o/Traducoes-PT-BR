@@ -24,8 +24,8 @@ REPO = os.path.dirname(HERE)
 DIST = os.path.join(REPO, "dist")
 
 # Somente estes itens entram no pacote publicado.
-INCLUDE = ["info.json", "data.lua", "changelog.txt", "README.md", "LICENSE",
-           "thumbnail.png", "locale"]
+INCLUDE = ["info.json", "data.lua", "changelog.txt", "README.md", "MODS.md",
+           "LICENSE", "thumbnail.png", "locale"]
 VALID_TARGETS = {"2.0", "2.1"}
 
 

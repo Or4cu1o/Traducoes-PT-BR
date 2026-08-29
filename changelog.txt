@@ -7,16 +7,17 @@ Date: 28/08/2026
     - Governança de repositório: LICENSE (MIT + concessão de reuso irrestrito das strings de locale/), CONTRIBUTING.md com glossário canônico pt-BR, CODE_OF_CONDUCT.md, CLAUDE.md, .gitattributes e .gitignore.
     - Ferramentas de manutenção em tools/ (validação de locale, glossário, tabela de mods, formato do changelog, empacotamento) e workflow de CI no GitHub.
   Changes:
+    - Estratégia definida: pacote autônomo (cobertura integral do ecossistema) que também funciona como fallback, com prioridade dos pacotes nativos AAI/LTN/Bob's por paridade de texto. Regras registradas em CLAUDE.md secoes 3, 11 e 12 e em CONTRIBUTING.md.
     - Lista de dependências opcionais do info.json reconstruída a partir de mods.csv, em ordem alfabética e sem depender de pacotes de idioma de terceiros.
     - Terminologia unificada ao glossário do jogo base em pt-BR (Insersor, Esteira de transporte, Máquina de montagem, Transmissor, Perfuratriz, Baú, entre outros).
   Locale:
     - +133 mods adicionados ao pacote (total: 232). Destaques: ecossistema AAI completo, Bob's Mods, Krastorio 2, Space Exploration, Angel's Refining e Petrochem, Yuoki Industries, Cerys, Maraxsis, Muluna, Castra, Tenebris e dezenas de utilitários e melhorias de qualidade de vida.
     - Absorvidas e sanitizadas as traduções do pacote YKR (Era Espacial e planetas adicionais), com correção de marcadores de interpolação, acentuação e capitalização.
-    - Preenchidas lacunas de pt-BR dos ecossistemas AAI e LTN sem sobrepor as chaves já traduzidas nos pacotes oficiais.
+    - Cobertura de lacunas de pt-BR dos ecossistemas AAI e LTN; onde há sobreposição com os pacotes nativos, o texto é cópia fiel da versão atual deles (mesma origem no Crowdin).
     - Saneamento dos arquivos .cfg existentes: quebra de linha final, remoção de espaços à direita, ausência de BOM e de CRLF.
   Info:
-    - mods.csv e a tabela do README.md regenerados a partir de uma única fonte (mods.csv), com versão-base, autoria e data de entrada de cada mod.
-    - Agradecimentos aos projetos de tradução usados como base: AAI Language Pack e LTN Language Pack (Astorin, via Crowdin factorio-mods-localization), Bob's Locale Translations (Karosieben) e YKR - Mods Traduzidos PTBR (duhyukora); e a Or4cu1o pela coordenação desta expansão.
+    - README.md enxugado (thumbnail centralizada, badges de versão/downloads/CI, bloco de status); a tabela completa de mods passou para MODS.md, gerada de mods.csv por tools/gen_mods_table.py e incluída no pacote publicado.
+    - Crédito da base de tradução ao projeto comunitário factorio-mods-localization (github.com/dima74/factorio-mods-localization / Crowdin) e a seus contribuidores. Coordenação: Or4cu1o; autoria original do mod: Slondo.
     - Limitações conhecidas: o mod "RPM-RW Kernbohrer" não possui localização de origem em inglês (template em alemão) e ficou fora do pacote; cerca de 65 chaves de 5 micro-mods deslistados do portal não puderam ser recuperadas.
 
 ---------------------------------------------------------------------------------------------------

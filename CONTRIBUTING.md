@@ -15,13 +15,17 @@ rotinas de manutenção, e o [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
   (e alguns _overrides_ condicionais em `data.lua`).
 - O motor do Factorio resolve tradução **chave a chave**. Se uma chave não
   existir aqui, o jogo usa o texto do mod original (em geral inglês).
-- Os pacotes oficiais de idioma (**AAI Language Pack**, **LTN Language Pack**,
-  **Bob's Locale**) têm prioridade sobre este pacote. Por isso **nunca**
-  enviamos chaves que já existam nesses pacotes e **nunca** declaramos
-  dependência deles — só preenchemos as lacunas que eles deixam.
-- Preferimos traduções já finalizadas no
+- O pacote é **autônomo**: traz tradução para todo o ecossistema coberto,
+  inclusive AAI, LTN e Bob's. Também funciona como **_fallback_** — se os
+  pacotes mantidos pela comunidade (**AAI Language Pack**, **LTN Language
+  Pack**, **Bob's Locale**) estiverem ativos, o texto **deles** deve
+  prevalecer. Isso é garantido por **paridade**: as chaves em comum são cópia
+  fiel do texto atual desses pacotes, e **nunca** declaramos dependência deles
+  no `info.json`. Detalhes em [`CLAUDE.md`](CLAUDE.md) §3 e §12.
+- Fonte primária de tradução: o pt-BR aprovado no
   [Crowdin factorio-mods-localization](https://crowdin.com/project/factorio-mods-localization)
-  e no [boblocale](https://crowdin.com/project/boblocale) a traduções novas.
+  e no [boblocale](https://crowdin.com/project/boblocale). O que falta passa
+  pelo pipeline Crowdin + IA descrito em [`CLAUDE.md`](CLAUDE.md) §11.
 
 ## 2. Estrutura de um arquivo `.cfg`
 

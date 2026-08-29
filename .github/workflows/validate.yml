@@ -27,7 +27,7 @@ jobs:
       - name: changelog.txt no formato do Factorio
         run: python3 tools/check_changelog.py changelog.txt
 
-      - name: Tabela de mods do README sincronizada
+      - name: Tabela de mods (MODS.md) sincronizada
         run: python3 tools/gen_mods_table.py --check
 
       - name: Empacotamento (dry-run)

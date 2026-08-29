@@ -16,12 +16,15 @@ Avisos (não falham, salvo --strict):
 
 Verificações locais opcionais (--source-mods DIR):
   - toda chave existe no template en correspondente
-  - nenhuma chave coincide com o pt-BR oficial de AAI/LTN/bob
+  - colisão com o pt-BR oficial de AAI/LTN/bob:
+      sem --standalone : erro (modelo "só preenchemos lacunas")
+      com  --standalone: ok se o valor for cópia fiel do pack; erro se divergir
 
 Uso:
     python3 tools/validate_locale.py locale/pt-BR
     python3 tools/validate_locale.py locale/pt-BR --strict
     python3 tools/validate_locale.py locale/pt-BR --source-mods ../_source_mods
+    python3 tools/validate_locale.py locale/pt-BR --source-mods ../_source_mods --standalone
 """
 from __future__ import annotations
 import argparse
@@ -203,6 +206,32 @@ def _read_keys(path: str) -> list:
     return out
 
 
+def _read_kv(path: str) -> list:
+    """Como _read_keys, mas retorna [((secao, chave), valor)] (valor sem
+    espaços nas pontas). Usado para checar cópia fiel no modo --standalone."""
+    out = []
+    section = ""
+    try:
+        with open(path, "r", encoding="utf-8-sig") as fh:
+            lines = fh.readlines()
+    except (OSError, UnicodeDecodeError):
+        return out
+    for raw in lines:
+        s = raw.strip()
+        if not s or s.startswith("#") or s.startswith(";"):
+            continue
+        m = SECTION_RE.match(s)
+        if m:
+            section = m.group(1).strip()
+            continue
+        if "=" in raw:
+            k, v = raw.split("=", 1)
+            k = k.strip()
+            if k:
+                out.append(((section, k), v.strip()))
+    return out
+
+
 PACK_DIRS = {"AAI-Language-Pack", "LTN-Language-Pack", "boblocale"}
 IGNORE_DIRS = {"factorio-mods-localization"}
 
@@ -210,11 +239,12 @@ IGNORE_DIRS = {"factorio-mods-localization"}
 def load_reference(source_mods: str) -> tuple:
     """Retorna (en_por_stem, oficial_ptbr_por_stem).
 
-    `en`      : templates em inglês de qualquer mod em _source_mods/.
-    `official`: pt-BR APENAS dos três pacotes de idioma (AAI/LTN/bob). O pt-BR
-               que um mod traz no próprio repo NÃO conta como "oficial" — ali
-               a ordem de carga resolve a sobreposição, e completá-lo é o
-               objetivo do projeto.
+    `en`      : {stem: set[(secao, chave)]} — templates em inglês de qualquer
+               mod em _source_mods/.
+    `official`: {stem: {(secao, chave): valor}} — pt-BR APENAS dos três pacotes
+               de idioma (AAI/LTN/bob), com o texto de cada chave. O pt-BR que
+               um mod traz no próprio repo NÃO conta como "oficial". pt-BR tem
+               precedência sobre pt.
     """
     en: dict = {}
     official: dict = {}
@@ -223,18 +253,24 @@ def load_reference(source_mods: str) -> tuple:
         if not os.path.isdir(base) or entry in IGNORE_DIRS:
             continue
         is_pack = entry in PACK_DIRS
-        langs = [("en", en)]
-        if is_pack:
-            langs += [("pt-BR", official), ("pt", official)]
-        for lang, bucket in langs:
+        for path in glob.glob(
+                os.path.join(base, "**", "locale", "en", "*.cfg"),
+                recursive=True):
+            stem = (_mod_stem(os.path.basename(path)) if is_pack
+                    else _mod_stem(entry))
+            keyset = en.setdefault(stem, set())
+            for ln in _read_keys(path):
+                keyset.add(ln)
+        if not is_pack:
+            continue
+        for lang in ("pt-BR", "pt"):
             for path in glob.glob(
                     os.path.join(base, "**", "locale", lang, "*.cfg"),
                     recursive=True):
-                stem = (_mod_stem(os.path.basename(path)) if is_pack
-                        else _mod_stem(entry))
-                keyset = bucket.setdefault(stem, set())
-                for ln in _read_keys(path):
-                    keyset.add(ln)
+                stem = _mod_stem(os.path.basename(path))
+                kv = official.setdefault(stem, {})
+                for key, val in _read_kv(path):
+                    kv.setdefault(key, val)   # pt-BR (1º) vence pt
     return en, official
 
 
@@ -275,6 +311,10 @@ def main(argv: list) -> int:
     ap.add_argument("--source-mods", metavar="DIR",
                     help="raiz de _source_mods/ para checar cobertura e "
                          "não-sobreposição com os pacotes oficiais")
+    ap.add_argument("--standalone", action="store_true",
+                    help="modo pacote autônomo: colisão com o pt-BR oficial é "
+                         "permitida se o valor for cópia fiel do pack; "
+                         "divergência de texto vira erro")
     args = ap.parse_args(argv)
 
     files = sorted(glob.glob(os.path.join(args.locale_dir, "*.cfg")))
@@ -302,14 +342,19 @@ def main(argv: list) -> int:
             name = os.path.relpath(path, REPO)
             stem = _mod_stem(os.path.basename(path))
             en_keys = en_ref.get(stem)
-            off_keys = official_ref.get(stem, set())
-            for (section, key) in keys:
+            off_kv = official_ref.get(stem, {})
+            for (section, key), our_val in keys.items():
                 if en_keys is not None and (section, key) not in en_keys:
                     rep.warn(name, f"[{section}] {key}: ausente no template en "
                                    f"de {stem}")
-                if (section, key) in off_keys:
-                    rep.err(name, f"[{section}] {key}: coincide com o pt-BR "
-                                  f"oficial de {stem} (não sobrepor)")
+                if (section, key) in off_kv:
+                    if not args.standalone:
+                        rep.err(name, f"[{section}] {key}: coincide com o pt-BR "
+                                      f"oficial de {stem} (não sobrepor)")
+                    elif our_val.strip() != off_kv[(section, key)].strip():
+                        rep.err(name, f"[{section}] {key}: difere do pt-BR "
+                                      f"oficial de {stem}; no modo --standalone "
+                                      f"deve ser cópia fiel do texto do pack")
     elif args.source_mods:
         rep.warn("(geral)", f"--source-mods {args.source_mods} não é diretório; "
                             f"checagens de cobertura ignoradas")
