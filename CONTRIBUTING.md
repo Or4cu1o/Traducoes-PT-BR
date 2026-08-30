@@ -282,7 +282,7 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 ### 5.10 Ciência
 
 | EN | PT-BR | Nota |
-|---|---|---|
+|:---:|:---:|:---:|
 | Automation Science Pack | Pacote de ciência de automação | |
 | Logistic Science Pack | Pacote de ciência de logística | |
 | Military Science Pack | Pacote de ciência militar | |
@@ -299,7 +299,7 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 ### 5.11 Interface e termos gerais
 
 | EN | PT-BR | Nota |
-|---|---|---|
+|:---:|:---:|:---:|
 | Research | Pesquisa | |
 | Technology | Tecnologia | |
 | Setting | Configuração | |
@@ -308,15 +308,15 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Disable | Desativar | |
 | Enabled | Ativado | |
 | Disabled | Desativado | |
-| Blueprint | Blueprint | Manter termo original |
-| Blueprint Book | Livro de Blueprints | Manter termo Blueprint original |
+| Blueprint | Projeto | |
+| Blueprint Book | Livro de Projetos | |
 | Deconstruction Planner | Planejador de demolição | |
 | Upgrade Planner | Planejador de melhoria | |
 | Tooltip | Dica | |
 | Achievement | Conquista | |
 | Surface | Superfície | |
-| Tile | Ladrilho | revisar |
-| Roboport | Roboport | Manter termo original |
+| Tile | Bloco | revisar |
+| Roboport | Roboport | Não traduzir |
 
 ## 6. Termos a **não** traduzir
 
