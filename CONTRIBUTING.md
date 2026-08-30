@@ -308,14 +308,15 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Disable | Desativar | |
 | Enabled | Ativado | |
 | Disabled | Desativado | |
-| Blueprint | Projeto | |
-| Blueprint Book | Livro de projetos | |
+| Blueprint | Blueprint | Manter termo original |
+| Blueprint Book | Livro de Blueprints | Manter termo original |
 | Deconstruction Planner | Planejador de demolição | |
 | Upgrade Planner | Planejador de melhoria | |
 | Tooltip | Dica | |
 | Achievement | Conquista | |
 | Surface | Superfície | |
 | Tile | Ladrilho | revisar |
+| Roboport | Roboport | Manter termo original |
 
 ## 6. Termos a **não** traduzir
 

@@ -10,6 +10,7 @@ Date: 28/08/2026
     - Estratégia definida: pacote autônomo (cobertura integral do ecossistema) que também funciona como fallback, com prioridade dos pacotes nativos AAI/LTN/Bob's por paridade de texto. Regras registradas em CLAUDE.md secoes 3, 11 e 12 e em CONTRIBUTING.md.
     - Lista de dependências opcionais do info.json reconstruída a partir de mods.csv, em ordem alfabética e sem depender de pacotes de idioma de terceiros.
     - Terminologia unificada ao glossário do jogo base em pt-BR (Insersor, Esteira de transporte, Máquina de montagem, Transmissor, Perfuratriz, Baú, entre outros).
+    - Glossário ajustado: "Blueprint"/"Blueprint Book" e "Roboport" mantidos no termo original (sem tradução). "roboporto" corrigido para "Roboport" em 10 arquivos existentes.
   Locale:
     - +134 mods adicionados ao pacote (total: 233). Destaques: ecossistema AAI completo, Bob's Mods, Krastorio 2, Space Exploration, Angel's Refining e Petrochem, Yuoki Industries, Cerys, Maraxsis, Muluna, Castra, Tenebris, Helmod e dezenas de utilitários e melhorias de qualidade de vida.
     - Absorvidas e sanitizadas as traduções do pacote YKR (Era Espacial e planetas adicionais), com correção de marcadores de interpolação, acentuação e capitalização.
