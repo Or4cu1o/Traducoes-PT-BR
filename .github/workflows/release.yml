@@ -106,12 +106,19 @@ jobs:
           (github.event_name != 'workflow_dispatch' ||
            github.event.inputs.publish_portal == 'true')
         env:
-          FACTORIO_PORTAL_API_KEY: ${{ secrets.FACTORIO_TOKEN }}
+          # aceita o token como secret (preferido) ou como variable, sob os
+          # nomes FACTORIO_TOKEN ou FACTORIO_PORTAL_API_KEY.
+          TOK_S1: ${{ secrets.FACTORIO_TOKEN }}
+          TOK_S2: ${{ secrets.FACTORIO_PORTAL_API_KEY }}
+          TOK_V1: ${{ vars.FACTORIO_TOKEN }}
+          TOK_V2: ${{ vars.FACTORIO_PORTAL_API_KEY }}
           FACTORIO_PORTAL_INIT_URL: ${{ vars.FACTORIO_PORTAL_INIT_URL }}
           V: ${{ steps.ver.outputs.version }}
         run: |
-          if [ -z "${FACTORIO_PORTAL_API_KEY:-}" ]; then
-            echo "::warning::secret FACTORIO_TOKEN vazio; upload ao portal pulado."
+          export FACTORIO_PORTAL_API_KEY="${TOK_S1:-${TOK_S2:-${TOK_V1:-${TOK_V2:-}}}}"
+          if [ -z "$FACTORIO_PORTAL_API_KEY" ]; then
+            echo "::warning::token do portal não encontrado (secret/var FACTORIO_TOKEN ou FACTORIO_PORTAL_API_KEY); upload pulado."
             exit 0
           fi
+          echo "token do portal presente (${#FACTORIO_PORTAL_API_KEY} chars)."
           python3 tools/portal_upload.py --zip "dist/slondo-ptbr_${V}.zip"
