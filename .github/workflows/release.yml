@@ -9,6 +9,12 @@ on:
     branches: [main]
     paths:
       - info.json
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Motivo do disparo manual (ex.: publicar a versão atual)"
+        required: false
+        default: "disparo manual"
 
 permissions:
   contents: write
@@ -32,8 +38,15 @@ jobs:
       - name: Detectar bump de versão (bloqueia retrocesso)
         id: ver
         run: |
-          python3 tools/check_version_bump.py \
-            --old-ref "${{ github.event.before }}" --github-output
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            V=$(python3 -c "import json; print(json.load(open('info.json'))['version'])")
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "version=$V" >> "$GITHUB_OUTPUT"
+            echo "::notice::disparo manual — publicando a versão atual ($V)."
+          else
+            python3 tools/check_version_bump.py \
+              --old-ref "${{ github.event.before }}" --github-output
+          fi
 
       - name: Sem mudança de versão — encerrar
         if: steps.ver.outputs.changed != 'true'
