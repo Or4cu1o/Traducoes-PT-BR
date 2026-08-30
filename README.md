@@ -1,142 +1,62 @@
-﻿# Traduções PT-BR
-Este é um pacote com traduções de vários mods, ele será atualizado a medida que muitos mods forem traduzidos! Sugestões de mods a serem traduzidos podem ser feitas a qualquer momento!
+# Traduções PT-BR
 
-This project aims to gather original translations for various mods I've submitted and expand that collection. Many of the listed mods already have a Brazilian Portuguese localization, but some, due to delays in approving suggestions, end up without a translation. The intention of this project is to create translations and leave the decision of officially integrating them to the mod author.
+<p align="center">
+  <img src="thumbnail.png" alt="Traduções pt-BR" width="144" height="144">
+</p>
 
-> 🛂 The standard used to translate the mods is based entirely on the game, and the context is maintained with what already exists in the game.
+<p align="center">
+  <a href="https://mods.factorio.com/mod/slondo-ptbr"><img alt="Versão no portal" src="https://img.shields.io/factorio-mod-portal/v/slondo-ptbr?label=portal&color=1f8acb"></a>
+  <a href="https://mods.factorio.com/mod/slondo-ptbr"><img alt="Downloads" src="https://img.shields.io/factorio-mod-portal/dt/slondo-ptbr?label=downloads&color=e67e22"></a>
+  <a href="https://mods.factorio.com/mod/slondo-ptbr"><img alt="Versão do Factorio" src="https://img.shields.io/factorio-mod-portal/factorio-version/slondo-ptbr?label=factorio"></a>
+  <a href="https://github.com/odnols/Traducoes-PT-BR/actions/workflows/validate.yml"><img alt="Pipeline de automação" src="https://github.com/odnols/Traducoes-PT-BR/actions/workflows/validate.yml/badge.svg"></a>
+  <a href="CLAUDE.md"><img alt="Tradução: Crowdin + IA" src="https://img.shields.io/badge/tradu%C3%A7%C3%A3o-Crowdin%20%2B%20IA-8a2be2"></a>
+  <a href="LICENSE"><img alt="Licença" src="https://img.shields.io/github/license/odnols/Traducoes-PT-BR?color=555"></a>
+  <a href="MODS.md"><img alt="Mods cobertos" src="https://img.shields.io/badge/mods-242-2ea44f"></a>
+</p>
 
-# 👨‍💻 Mod creators
-📡 If you are a mod creator and your mod is listed here, feel free to get a copy of the translations that have been made, or add our mod as a optional dependency on your mod!
-> If you integrate the translation into the mod natively, please give proper credits!
+Pacote de tradução **pt-BR** para mods do Factorio. Funciona de forma
+**autônoma** — não é preciso instalar nenhum outro pacote de idioma para jogar
+em português, inclusive os conteúdos de AAI, LTN e Bob's — e também como
+**_fallback_**: se os pacotes mantidos pela comunidade (`AAI Language Pack`,
+`LTN Language Pack`, `Bob's Locale`) estiverem ativos, o texto **deles**
+prevalece nas chaves em comum.
 
-> ⏰ If you want more frequent updates and less work, make this pack optional (or required) in your mod to give players the option to download (or not) this localization, making your mod more accessible for brazilian portuguese speakers!
+> O padrão de tradução segue o Factorio base e o glossário canônico. Arquitetura
+> dos locales e pipeline de tradução: [`CLAUDE.md`](CLAUDE.md).
 
-📣 If your mod is not listed here and you would like to locate to your mod in Brazilian Portuguese with as much accurate detail as possible, contact me!
+## 📊 Status
 
-## 🐲 Mods and translation packs...
-It's a double-edged sword; while it speeds up localization for various mods, it can also become a headache with outdated content.
+| | |
+|---|---|
+| Mods cobertos | **242** — lista completa em [`MODS.md`](MODS.md) |
+| _Releases_ no portal | 7 (desde 11/11/2025) |
+| Ciclo de atualização | uma grande atualização a cada 1–2 meses |
+| Alvo | Factorio **2.0** (variante 2.1 roteirizada) |
 
-> 🔃 If your mod has been updated and has changed/added phrases, please let me know so we can keep it as up-to-date as possible!
+> É possível usar o conteúdo antes do lançamento oficial: baixe este repositório
+> e mova a pasta para `%appdata%/factorio/mods`.
 
-## ⏱ Próximo lançamento
-Por se tratar de um pacote de traduções, não haverá atualizações constantes para evitar downloads desnecessários a cada "1" caractere alterado, em respeito
-aos usuários, é planejado lançar uma grande atualização por mês ou a cada 2 meses contendo diversas adições.
+## 🤝 Convivência com os pacotes nativos
 
-Caso você esteja lendo isso, saiba que é possível baixar este repositório e incluir no seu jogo antes que o conteúdo seja oficialmente liberado em uma release no [portal mod](https://mods.factorio.com/mod/slondo-ptbr).
+Para cada chave que um pacote nativo (AAI/LTN/Bob's Locale) também traduz, o
+nosso texto é **cópia fiel** da versão atual dele — mesma origem no Crowdin —
+então a ordem de carga é irrelevante. Não há dependência sobre esses pacotes no
+`info.json`. Detalhes em [`CLAUDE.md`](CLAUDE.md) §3 e §12.
 
-> Para isso, baixe o repositório e mova ele para o `%appdata%`, e depois para a pasta `factorio/mods`.
+## 👨‍💻 Para criadores de mods
 
-O planejado é ter conteúdo suficiente para justificar uma troca de versão e um novo download, o repositório no git será atualizado frequentemente até
-ter justificativa para ser publicado no mod oficialmente.
+Sinta-se à vontade para copiar as traduções deste pacote para o seu mod, ou
+adicioná-lo como dependência opcional (ou obrigatória) para dar aos jogadores a
+opção do pt-BR. Se integrar a tradução nativamente, **dê os devidos créditos**.
+Se o seu mod mudou ou adicionou frases, avise para mantermos o pacote atualizado.
 
-Com o lançamento oficial do mod em `11/11/2025`, o planejado é estar enviando uma atualização ao portal mod até o `10° dia` de cada mês, ou quando juntar bastante conteúdo.
+## 🙏 Créditos
 
-# 🔣 Mods traduzidos
-- ( Atualmente: 100 )
+A base de tradução vem do projeto comunitário
+**[factorio-mods-localization](https://github.com/dima74/factorio-mods-localization)**
+([Crowdin](https://crowdin.com/project/factorio-mods-localization)) e de seus
+tradutores. Onde o Crowdin não cobre, o texto é gerado pelo pipeline
+**[boblocale](https://github.com/Karosieben/boblocale)**
+([Crowdin](https://crowdin.com/project/boblocale))
 
-📊 **Supported mods:**
-
-[View Spreadsheet](mods.csv) - An ordered list of all supported mods, similar to the one below, but in English.
-> "Mod version" on the csv file refers to the version that was used as the basis for creating the localizations for the specific mod. This number will change if more words are added to the mod.
-
-| Integrado | Mod | Autor(es) | Lançamento |
-|:--------:|:-------------:|:----|:---------|
-| `V1.0.4` | [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | Earendel | `11/01/2026` |
-| `V1.0.3` | [Actual Underground Pipes](https://mods.factorio.com/mod/the-one-mod-with-underground-bits) | protocol_1903 | `07/12/2025` |
-| `V1.0.3` | [Advanced Atomic Science](https://mods.factorio.com/mod/advanced-atomic-science) | Velaanix | `07/12/2025` |
-| `V1.0.4` | [Agricultural Roboport](https://mods.factorio.com/mod/agricultural-roboport) | Proffzulus | `11/01/2026` |
-| `V1.0.4` | [Alloy Smelting](https://mods.factorio.com/mod/alloy-smelting) | SafTheLamb & S6X | `11/01/2026` |
-| `V1.0.5` | [Apia](https://mods.factorio.com/mod/apia) | DimonSever000 | `12/02/2026` |
-| `V1.0.3` | [Assembling Machine 2.5](https://mods.factorio.com/mod/AssemblingMachine25) | DrinkShellOil | `07/12/2025` |
-| `V1.0.4` | [Barreling Group](https://mods.factorio.com/mod/barreling-group2) | pav, GeneralTank & Evilpla | `11/01/2026` |
-| `V1.0.3` | [Basic Chemistry](https://mods.factorio.com/mod/basic-chemistry) | EleusisLaArwall | `07/12/2025` |
-| `V1.0.3` | [Basic Chemistry – Full Control](https://mods.factorio.com/mod/basic-chemistry-full-control) | EleusisLaArwall | `07/12/2025` |
-| `V1.0.0` | [Battery-Electric Train](https://mods.factorio.com/mod/BatteryElectricTrain) | catWEax | `11/11/2025` |
-| `V1.0.1` | [Bio Industries](https://mods.factorio.com/mod/Bio_Industries_2) | TheSAguy, Pi-C, Snouz & cackling.fiend | `11/11/2025` |
-| `V1.0.6` | [Biter Attractors](https://mods.factorio.com/mod/biter-attractors) | O5MO | `24/06/2026` |
-| `V1.0.3` | [Bluetonium](https://mods.factorio.com/mod/Bluetonium) | S6X | `07/12/2025` |
-| `V1.0.4` | [Canal Excavator](https://mods.factorio.com/mod/canal-excavator) | Jurgy | `11/01/2026` |
-| `V1.0.2` | [Cannon Turret](https://mods.factorio.com/mod/vtk-cannon-turret) | Vortik | `15/11/2025` |
-| `V1.0.3` | [Carbonut Agriculture](https://mods.factorio.com/mod/carbonut_agriculture) | Talandar99 | `07/12/2025` |
-| `V1.0.4` | [Cargo Crates](https://mods.factorio.com/mod/cargo_crates) | Talandar99 | `11/01/2026` |
-| `V1.0.6` | [Cargo Drone](https://mods.factorio.com/mod/cargo-drone) | Devilhar | `24/06/2026` |
-| `V1.0.4` | [Cargo Ships](https://mods.factorio.com/mod/cargo-ships) | schnurrebutz & snouz | `11/01/2026` |
-| `V1.0.2` | [Carriage Transport](https://mods.factorio.com/mod/carriage) | SoulCRYSIS | `15/11/2025` |
-| `V1.0.3` | [Carnivorous Bacteria](https://mods.factorio.com/mod/carnivorous_bacteria) | Pithlit | `07/12/2025` |
-| `V1.0.6` | [Crane Builder](https://mods.factorio.com/mod/crane-builder) | XenoLupus | `24/06/2026` |
-| `V1.0.3` | [Crushing Industry](https://mods.factorio.com/mod/crushing-industry) | SafTheLamb & S6X | `07/12/2025` |
-| `V1.0.3` | [Cupric Asteroids](https://mods.factorio.com/mod/cupric-asteroids) | SafTheLamb & S6X | `07/12/2025` |
-| `V1.0.4` | [Diesel Engine](https://mods.factorio.com/mod/diesel_engine) | Talandar99 | `11/01/2026` |
-| `V1.0.4` | [Distant Shores](https://mods.factorio.com/mod/pirateship) | micaalle | `11/01/2026` |
-| `V1.0.3` | [Dynamic Rain](https://mods.factorio.com/mod/dynamic-rain) | valertron | `07/12/2025` |
-| `V1.0.2` | [Early Elevated Rails](https://mods.factorio.com/mod/early-elevated-rails) | Marcel171297 | `15/11/2025` |
-| `V1.0.0` | [Elevated pipes](https://mods.factorio.com/mod/elevated-pipes) | Quezler & Redotix99 | `11/11/2025` |
-| `V1.0.3` | [Even More Text Plates](https://mods.factorio.com/mod/EvenMoreTextPlates) | Zengineer | `07/12/2025` |
-| `V1.0.5` | [Extra Storage Tanks: Tiny Storage Tanks](https://mods.factorio.com/mod/est-tiny-storage-tank) | ZarSasha, Aurora & Moonlight | `12/02/2026` |
-| `V1.0.3` | [Factorio+](https://mods.factorio.com/mod/factorioplus) | Fishbus | `07/12/2025` |
-| `V1.0.4` | [Factorio Data Standards Library](https://mods.factorio.com/mod/fdsl) | SafTheLamb | `11/01/2026` |
-| `V1.0.4` | [Factorissimo 3](https://mods.factorio.com/mod/factorissimo-2-notnotmelon) | MagmaMcFry & notnotmelon | `11/01/2026` |
-| `V1.0.0` | [Fluid Must Flow](https://mods.factorio.com/mod/FluidMustFlow) | Linver, Krastor & raiguard | `11/11/2025` |
-| `V1.0.3` | [Fluid recycler](https://mods.factorio.com/mod/liquid_recycler) | Powerscooter | `07/12/2025` |
-| `V1.0.3` | [Fluroflux: Stingfrond Agriculture](https://mods.factorio.com/mod/fluroflux) | LordMiguel | `07/12/2025` |
-| `V1.0.0` | [Fracking Tower](https://mods.factorio.com/mod/pk-fracking-tower) | GammaDelta | `11/11/2025` |
-| `V1.0.4` | [Fundryu](https://mods.factorio.com/mod/Fundryu) | Azertyyu | `11/01/2026` |
-| `V1.0.5` | [Fusion Machines](https://mods.factorio.com/mod/fusion_machines) | Talandar99 | `12/02/2026` |
-| `V1.0.0` | [Fusion Robots](https://mods.factorio.com/mod/FusionPoweredRobots) | Acouya | `11/11/2025` |
-| `V1.0.3` | [HD planets](https://mods.factorio.com/mod/hd_planets) | OwnlyMe | `07/12/2025` |
-| `V1.0.4` | [HD Plasma Duct](https://mods.factorio.com/mod/hd-plasma-duct) | Powerscooter & Keysivi | `11/01/2026` |
-| `V1.0.2` | [Heat Inserter](https://mods.factorio.com/mod/heat-inserter) | Kryzeth | `15/11/2025` |
-| `V1.0.3` | [Heat-resistant Pipes](https://mods.factorio.com/mod/HotPipesFork) | NOiZE | `07/12/2025` |
-| `V1.0.4` | [Larger Lamps 2.0](https://mods.factorio.com/mod/LargerLamps-2_0) | Deadlock989, Goakiller900, MasterBuilder & NullHarp | `11/01/2026` |
-| `V1.0.0` | [Legacy Train Model](https://mods.factorio.com/mod/AspctTrainPatch) | aspct | `11/11/2025` |
-| `V1.0.6` | [Logistic Technology Beacon 2.0](https://mods.factorio.com/mod/logtech-beacon-2) | cosinusek | `24/06/2026` |
-| `V1.0.2` | [Logistics Insights](https://mods.factorio.com/mod/logistics-insights) | farzag | `15/11/2025` |
-| `V1.0.4` | [Long range delivery drones (fork)](https://mods.factorio.com/mod/long_range_delivery_drones_talandar_fork) | Talandar99 | `11/01/2026` |
-| `V1.0.5` | [Lubrication Tower](https://mods.factorio.com/mod/lubrication_tower) | Talandar99 | `12/02/2026` |
-| `V1.0.3` | [Manufacturer](https://mods.factorio.com/mod/Manufacturer) | Velaanix | `07/12/2025` |
-| `V1.0.0` | [Minimal Electric Rails](https://mods.factorio.com/mod/minimalist-rails) | snouz | `11/11/2025` |
-| `V1.0.2` | [Mini Trains](https://mods.factorio.com/mod/Mini_Trains) | Klonan & Sacredanarchy | `15/11/2025` |
-| `V1.0.2` | [Mini Trains Lead the Way](https://mods.factorio.com/mod/Mini-Trains-Lead-the-Way) | Indzasa | `15/11/2025` |
-| `V1.0.3` | [Missile Defense Systems [SA]](https://mods.factorio.com/mod/missile_defense_systems_sa) | kafoaai | `07/12/2025` |
-| `V1.0.4` | [Molten plastic](https://mods.factorio.com/mod/molten_plastic) | Powerscooter | `11/01/2026` |
-| `V1.0.6` | [No Solid Fuel Vehicles](https://mods.factorio.com/mod/no-solid-fuel-vehicles) | valertron | `24/06/2026` |
-| `V1.0.0` | [Ore-ganizer](https://mods.factorio.com/mod/ore-ganizer) | 0n0w1c | `11/11/2025` |
-| `V1.0.3` | [Parallel Research](https://mods.factorio.com/mod/simultaneous-research) | Tename | `07/12/2025` |
-| `V1.0.5` | [Planet Akularis](https://mods.factorio.com/mod/planet-akularis) | rjdunlap | `12/02/2026` |
-| `V1.0.2` | [Planet Belt Portal](https://mods.factorio.com/mod/planet-belt-portal) | agaede22 | `15/11/2025` |
-| `V1.0.5` | [Planet Foliax](https://mods.factorio.com/mod/foliax) | Crethor | `12/02/2026` |
-| `V1.0.5` | [Planet Hexalith](https://mods.factorio.com/mod/planet-hexalith) | rjdunlap | `12/02/2026` |
-| `V1.0.5` | [Planet Maraxsis](https://mods.factorio.com/mod/maraxsis) | notnotmelon | `12/02/2026` |
-| `V1.0.4` | [Planet Pelagos](https://mods.factorio.com/mod/pelagos) | Talandar99 | `11/01/2026` |
-| `V1.0.0` | [Planet Vesta](https://mods.factorio.com/mod/skewer_planet_vesta) | CPU_BlackHeart | `11/11/2025` |
-| `V1.0.4` | [PlanetLib](https://mods.factorio.com/mod/PlanetsLib) | thesixthroc | `11/01/2026` |
-| `V1.0.0` | [Plasma Accelerator](https://mods.factorio.com/mod/reactor-m) | ArkadiPorovozov | `11/11/2025` |
-| `V1.0.4` | [Plasma Handling](https://mods.factorio.com/mod/plasma_handling) | Powerscooter | `11/01/2026` |
-| `V1.0.4` | [Plasma Industries](https://mods.factorio.com/mod/plasma_crafter) | Powerscooter | `11/01/2026` |
-| `V1.0.5` | [Pneumatic Mining Drill](https://mods.factorio.com/mod/pneumatic-mining-drill) | Wolbobus | `12/02/2026` |
-| `V1.0.6` | [Posted Signals](https://mods.factorio.com/mod/posted-signals) | O5MO | `24/06/2026` |
-| `V1.0.4` | [Promethium Belts](https://mods.factorio.com/mod/promethium-belts) | Helios467 | `11/01/2026` |
-| `V1.0.4` | [Quantum emitter](https://mods.factorio.com/mod/Quantum-diffuser) | Azertyyu | `11/01/2026` |
-| `V1.0.4` | [Quantum Lab](https://mods.factorio.com/mod/quantum_lab) | Azertyyu | `11/01/2026` |
-| `V1.0.0` | [Reach Equipment](https://mods.factorio.com/mod/reach-equipment) | BetweenWalls | `11/11/2025` |
-| `V1.0.6` | [Repair Turret 2](https://mods.factorio.com/mod/Repair_Turret_2) | tiko13 | `24/06/2026` |
-| `V1.0.4` | [Robocharger Factorio 2.0](https://mods.factorio.com/mod/Robocharger-Updated) | Smurph & briel1235 | `11/01/2026` |
-| `V1.0.6` | [Rocket silos can buffer more rockets](https://mods.factorio.com/mod/rocket-silos-can-buffer-more-rockets) | Quezler & username9999 | `24/06/2026` |
-| `V1.0.5` | [Scrap Toolkit](https://mods.factorio.com/mod/scraptk) | SafTheLamb & S6X | `12/02/2026` |
-| `V1.0.4` | [Scrappy Chemistry](https://mods.factorio.com/mod/scrap-chemistry) | SafTheLamb | `11/01/2026` |
-| `V1.0.3` | [Scrappy Industry](https://mods.factorio.com/mod/scrap-industry) | SafTheLamb | `07/12/2025` |
-| `V1.0.5` | [Spidertron Enhancements](https://mods.factorio.com/mod/SpidertronEnhancements) | Xorimuth | `12/02/2026` |
-| `V1.0.5` | [Spidertron Patrols](https://mods.factorio.com/mod/SpidertronPatrols) | Xorimuth | `12/02/2026` |
-| `V1.0.0` | [StarMap Background](https://mods.factorio.com/mod/Better_Starmap_Background) | Tserup | `11/11/2025` |
-| `V1.0.2` | [Sushi Splitters](https://mods.factorio.com/mod/sushi-splitters) | TeXiCiTy | `15/11/2025` |
-| `V1.0.0` | [Text Plates](https://mods.factorio.com/mod/textplates) | Earendel & gheift | `11/11/2025` |
-| `V1.0.2` | [Tungsten](https://mods.factorio.com/mod/bztungsten2) | cackling.fiend & Brevven | `15/11/2025` |
-| `V1.0.4` | [Various Cargo Bays](https://mods.factorio.com/mod/Various_Cargo_Bays) | Powerscooter | `11/01/2026` |
-| `V1.0.0` | [Visible Planets in Space](https://mods.factorio.com/mod/visible-planets) | Nauviax | `11/11/2025` |
-| `V1.0.3` | [Voidcraft](https://mods.factorio.com/mod/Voidcraft) | S6X | `07/12/2025` |
-| `V1.0.6` | [Winter Is Coming](https://mods.factorio.com/mod/winter-is-coming) | valertron | `24/06/2026` |
-| `V1.0.5` | [Wire Lamps](https://mods.factorio.com/mod/wire_lamps) | peterwolf.pl | `12/02/2026` |
-| `V1.0.4` | [Wooden Industry](https://mods.factorio.com/mod/wood-industry) | SafTheLamb | `11/01/2026` |
-| `V1.0.3` | [Wooden Logistics](https://mods.factorio.com/mod/wood-logistics) | SafTheLamb | `07/12/2025` |
-| `V1.0.6` | [Wooden Moshine: Solaponics](https://mods.factorio.com/mod/moshine-solaponics) | SafTheLamb | `24/06/2026` |
-| `V1.0.5` | [Wooden Platform](https://mods.factorio.com/mod/wooden_platform) | Talandar99 | `12/02/2026` |
+Agradecimentos a **[Or4cu1o](https://github.com/Or4cu1o)** por manter o projeto atualizado.

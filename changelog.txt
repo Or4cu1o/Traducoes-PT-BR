@@ -1,4 +1,34 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 28/08/2026
+  Features:
+    - Reestruturação do pacote como hub canônico de tradução pt-BR para mods do Factorio.
+    - Versão do pacote saltada para 2.0.0 para marcar o marco de cobertura autônoma integral do ecossistema (242 mods).
+    - Alvo do jogo ajustado para a versão 2.0; método de duplo lançamento 2.0/2.1 documentado e roteirizado.
+    - Governança de repositório: LICENSE (MIT + concessão de reuso irrestrito das strings de locale/), CONTRIBUTING.md com glossário canônico pt-BR, CODE_OF_CONDUCT.md, CLAUDE.md, .gitattributes e .gitignore.
+    - Ferramentas de manutenção em tools/ (validação de locale, glossário, tabela de mods, formato do changelog, empacotamento) e workflow de CI no GitHub.
+  Changes:
+    - Estratégia definida: pacote autônomo (cobertura integral do ecossistema) que também funciona como fallback, com prioridade dos pacotes nativos AAI/LTN/Bob's por paridade de texto. Regras registradas em CLAUDE.md secoes 3, 11 e 12 e em CONTRIBUTING.md.
+    - Lista de dependências opcionais do info.json reconstruída a partir de mods.csv, em ordem alfabética e sem depender de pacotes de idioma de terceiros.
+    - Terminologia unificada ao glossário do jogo base em pt-BR (Insersor, Esteira de transporte, Máquina de montagem, Transmissor, Perfuratriz, Baú, entre outros).
+    - Glossário revisado: "Tile" traduzido como "Bloco" (antes "Ladrilho"); "Blueprint"/"Blueprint Book" mantidos como "Projeto"/"Livro de Projetos".
+  Locale:
+    - +143 mods adicionados ao pacote (total: 242). Destaques: ecossistema AAI completo, Bob's Mods, Krastorio 2, Space Exploration, Angel's Refining e Petrochem, Yuoki Industries, Cerys, Maraxsis, Muluna, Castra, Tenebris, Helmod e dezenas de utilitários e melhorias de qualidade de vida.
+    - Absorvidas e sanitizadas as traduções do pacote YKR (Era Espacial e planetas adicionais), com correção de marcadores de interpolação, acentuação e capitalização.
+    - Cobertura de lacunas de pt-BR dos ecossistemas AAI e LTN; onde há sobreposição com os pacotes nativos, o texto é cópia fiel da versão atual deles (mesma origem no Crowdin). 372 chaves ingeridas verbatim dos pacotes AAI/LTN Language Pack por tools/ingest_sources.py.
+    - AAI Containers e AAI Zones: locale cópia fiel do AAI Language Pack (paridade de texto, 80 chaves ingeridas verbatim).
+    - Mower (9 chaves, base YKR sanitizada: "Cortator" -> "Cortador") e Deadlock Stacking For Bobs (2 chaves, tradução nova).
+    - 5 mods novos sem tradução prévia: Castra Prime (152 chaves; 104 em paridade com locale/pt-BR/castra.cfg, 48 novas do fork), Armoured Biters (63), Dredgeworks (43), Stirling Generator (5) e Bullet Trails (2). Traduções revisadas contra o glossário e os marcadores de interpolação.
+    - Pipeline IA multiagente (Gemini via agy + revisão Claude Sonnet 5) — Tier A do modelo autônomo: 210 chaves novas em planet-muluna (88), Helmod (arquivo novo, 121) e Krastorio 2 Spaced Out (1), revisadas contra o glossário, os marcadores de interpolação e os precedentes do repositório.
+    - Pipeline IA — Tier B (ecossistemas de produção): 33 chaves novas em Factorio-Tiberium (16, "Tiberium" mantido sem traduzir por precedente), metal-and-stars (6), Bob's Tech/Power/Plates/Warfare/Logistics/Ores (9), Factorissimo 3 (1) e Krastorio 2 (1). A lacuna real do Tier B era 33 e não ~280 — o restante já estava coberto pelo locale/pt-BR/ dos próprios mods.
+    - Pipeline IA — Tier C (QoL e planetas menores): 65 chaves novas em PlanetsLib (13), Mining Drones (13), MegaBotStart (11), Cerys - Moon of Fulgora (8), Rate Calculator (5), Spidertron Patrols (5), Better Starmap Background (4), Cargo Ships (2), Cubium (1), Light Overhaul (1), BottleneckLite (1) e Better Chat (1). Termos alinhados aos precedentes de cada arquivo ("drone de mineração", "Automação de mecha").
+    - Saneamento dos arquivos .cfg existentes: quebra de linha final, remoção de espaços à direita, ausência de BOM e de CRLF.
+  Info:
+    - README.md enxugado (thumbnail centralizada, badges de versão/downloads/CI, bloco de status); a tabela completa de mods passou para MODS.md, gerada de mods.csv por tools/gen_mods_table.py e incluída no pacote publicado.
+    - Crédito da base de tradução ao projeto comunitário factorio-mods-localization (github.com/dima74/factorio-mods-localization / Crowdin) e a seus contribuidores. Coordenação: Or4cu1o; autoria original do mod: Slondo.
+    - Limitações conhecidas: o mod "RPM-RW Kernbohrer" não possui localização de origem em inglês (template em alemão) e ficou fora do pacote; cerca de 65 chaves de 5 micro-mods deslistados do portal não puderam ser recuperadas.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.6
 Date: 24/06/2026
   Adições:
@@ -115,10 +145,10 @@ Date: 11/01/2026
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 07/12/2025
-  Depencencies:
+  Dependencies:
     - The changes from V1.0.2 have been undone! Optional mods make downloading faster and it's easier to see in-game what's supported in the translation package!
       - Unlike the changelog, we will list supported mods in alphabetical order globally, without separating by versions, just adding them in the middle.
-  Advices:
+  Advice:
     - This pack is not restricted to working only with the Space Age; however, we may encounter resources in some mods that are not compatible with the Space Age but have the same name. In these cases, the name of the item included in the Space Age will be prioritized. If you are a mod developer, prioritize adding tags to your items, such as "slondo-iron-plate," instead of simply including them as "iron-plate".
       - With this version, we are also including functions to correct names and descriptions according to the mods that are active. If your mod uses standard names for items that already exist in the game, it will be included in data.lua to disable these translations if your mod is not installed by the player. Therefore, the names you give to your mod's items will only be displayed if your mod is active.
   Adições:
@@ -172,7 +202,7 @@ Date: 07/12/2025
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 15/11/2025
-  Depencencies:
+  Dependencies:
     - In this upload, we are removing the optional dependent mods from de site list. Since all supported mods are listed on the mod page, if your mod is on this list, please consider adding our mod as an optional one to your list to inform players that they can download Portuguese (Brazil) translations for your mod. This change aims to reduce repetitive work and the huge list of dependent mods as the package expands.
     - Another detail concerns the changelog; with this update, we are also listing all the changes in Brazilian Portuguese so that native speakers know what is being changed, since this is a package for Brazilian Portuguese speakers. This will not imply the exclusion of the english returns here or in the mod page, so that all English-speaking readers know what's going on (without needing to translate :P)
   Adições:

@@ -1,18 +1,64 @@
 Supported,Mod Version,Mod,Author(s),Released
+V2.0.0,0.3.2,AAI Containers,Earendel,28/08/2026
+V2.0.0,0.6.16,AAI Industry,Earendel,28/08/2026
 V1.0.4,0.2.11,AAI Loaders,Earendel,11/01/2026
+V2.0.0,0.8.3,AAI Programmable Structures,Earendel,28/08/2026
+V2.0.0,0.8.5,AAI Programmable Vehicles,Earendel,28/08/2026
+V2.0.0,0.5.3,AAI Signal Transmission,Earendel,28/08/2026
+V2.0.0,0.7.1,AAI Signals,Earendel,28/08/2026
+V2.0.0,0.7.2,AAI Vehicles: Chaingunner,Earendel,28/08/2026
+V2.0.0,0.6.2,AAI Vehicles: Flame Tank,Earendel,28/08/2026
+V2.0.0,0.7.2,AAI Vehicles: Flame Tumbler,Earendel,28/08/2026
+V2.0.0,0.7.3,AAI Vehicles: Hauler,Earendel,28/08/2026
+V2.0.0,0.7.5,AAI Vehicles: Ironclad,Earendel,28/08/2026
+V2.0.0,0.7.4,AAI Vehicles: Laser Tank,Earendel,28/08/2026
+V2.0.0,0.7.1,AAI Vehicles: Miner,Earendel,28/08/2026
+V2.0.0,0.6.4,AAI Vehicles: Warden,Earendel,28/08/2026
+V2.0.0,0.7.2,AAI Zones,Earendel,28/08/2026
+V2.0.0,1.0.7,Accumulator V2,Sacredanarchy,28/08/2026
 V1.0.3,1.0.14,Actual Underground Pipes,protocol_1903,07/12/2025
 V1.0.3,1.0.3,Advanced Atomic Science,Velaanix,07/12/2025
 V1.0.4,1.3.6,Agricultural Roboport,Proffzulus,11/01/2026
+V2.0.0,0.7.4,Alien Biomes,Earendel,28/08/2026
 V1.0.4,0.6.0,Alloy Smelting,SafTheLamb & S6X,11/01/2026
+V2.0.0,2.0.3,Angel's Petrochemical Processing,Arch666Angel,28/08/2026
+V2.0.0,2.0.4,Angel's Refining,Arch666Angel,28/08/2026
 V1.0.5,0.0.1,Apia,DimonSever000,12/02/2026
+V2.0.0,2.0.2,Armoured Biters,CybranM,28/08/2026
 V1.0.3,1.5.0,Assembling Machine 2.5,DrinkShellOil,07/12/2025
+V2.0.0,1.9.0,Astroponics,SafTheLamb,28/08/2026
+V2.0.0,2.0.0,ATC Tower,Zniwiarz44,28/08/2026
+V2.0.0,0.7.1,Avatars,DedlySpyder,28/08/2026
 V1.0.4,0.5.0,Barreling Group,"pav, GeneralTank & Evilpla",11/01/2026
 V1.0.3,0.1.7,Basic Chemistry,EleusisLaArwall,07/12/2025
 V1.0.3,0.1.0,Basic Chemistry Full Control,EleusisLaArwall,07/12/2025
 V1.0.0,2.0.3,Battery-Electric Train,catWEax,11/11/2025
+V2.0.0,2.0.3,Beacon Rebalance,wretlaw120,28/08/2026
+V2.0.0,2.0.2,Belt Visualizer,_CodeGreen,28/08/2026
+V2.0.0,0.4.6,Better Chatting,PennyJim,28/08/2026
 V1.0.0,2.0.31,Bio Industries,"TheSAguy, Pi-C, Snouz & cackling.fiend",11/11/2025
-V1.0.3,2.7.3,Bluetonium,S6X,07/12/2025
+V2.0.0,1.5.0,Bio processing group,Frontrider,28/08/2026
 V1.0.6,0.1.3,Biter Attractors,O5MO,24/06/2026
+V2.0.0,3.2.2,Blueprint Sandboxes,somethingtohide,28/08/2026
+V1.0.3,2.7.3,Bluetonium,S6X,07/12/2025
+V2.0.0,2.0.3,Bob's Adjustable Inserters,Bobingabout,28/08/2026
+V2.0.0,2.1.0,Bob's Assembling machines,Bobingabout,28/08/2026
+V2.0.0,2.1.1,Bob's Electronics,Bobingabout,28/08/2026
+V2.0.0,2.1.0,Bob's Enemies,Bobingabout,28/08/2026
+V2.0.0,2.1.0,Bob's Functions Library mod,Bobingabout,28/08/2026
+V2.0.0,2.1.1,Bob's Logistics mod,Bobingabout,28/08/2026
+V2.0.0,2.1.1,"Bob's Metals, Chemicals and Intermediates",Bobingabout,28/08/2026
+V2.0.0,2.1.0,Bob's Mining,Bobingabout,28/08/2026
+V2.0.0,2.1.0,Bob's Modules,Bobingabout,28/08/2026
+V2.0.0,2.1.2,Bob's Ores,Bobingabout,28/08/2026
+V2.0.0,2.1.0,Bob's Power,Bobingabout,28/08/2026
+V2.0.0,2.1.1,Bob's Revamp mod,Bobingabout,28/08/2026
+V2.0.0,2.1.0,Bob's Tech,Bobingabout,28/08/2026
+V2.0.0,2.1.1,Bob's Vehicle Equipment,Bobingabout,28/08/2026
+V2.0.0,2.1.0,Bob's Warfare,Bobingabout,28/08/2026
+V2.0.0,1.3.4,Bottleneck Lite,raiguard,28/08/2026
+V2.0.0,0.7.1,Bullet Trails,Earendel,28/08/2026
+V2.0.0,1.1.2,Call a Plumber,half_a_cat,28/08/2026
 V1.0.4,1.13.3,Canal Excavator,Jurgy,11/01/2026
 V1.0.2,2.4.2,Cannon Turret,Vortik,15/11/2025
 V1.0.3,0.3.1,Carbonut Agriculture,Talandar99,07/12/2025
@@ -21,80 +67,177 @@ V1.0.6,1.5.1,Cargo Drone,Devilhar,24/06/2026
 V1.0.4,1.0.29,Cargo Ships,schnurrebutz & snouz,11/01/2026
 V1.0.3,1.0.1,Carnivorous Bacteria,Pithlit,07/12/2025
 V1.0.2,0.1.1,Carriage Transport,SoulCRYSIS,15/11/2025
-V1.0.3,1.5.6,Cupric Asteroids,SafTheLamb & S6X,07/12/2025
+V2.0.0,0.8.3,Castra Prime,erronius,28/08/2026
+V2.0.0,4.24.2,Cerys,thesixthroc,28/08/2026
+V2.0.0,1.2.0,Change Inserter Drop Lane,raiguard,28/08/2026
+V2.0.0,0.7.2,Combat mechanics overhaul,Earendel,28/08/2026
+V2.0.0,2.0.0,Comfortable Loader,plexpt,28/08/2026
 V1.0.6,1.4.1,Crane Builder,XenoLupus,24/06/2026
 V1.0.3,0.5.4,Crushing Industry,SafTheLamb & S6X,07/12/2025
+V2.0.0,1.0.31,Cubium,AnotherZach,28/08/2026
+V1.0.3,1.5.6,Cupric Asteroids,SafTheLamb & S6X,07/12/2025
+V2.0.0,2.0.2,Deadlock Stacking For Bobs,billbo99,28/08/2026
+V2.0.0,2.0.3,Deadlock Stacking for Vanilla,billbo99,28/08/2026
+V2.0.0,2.6.0,Deadlock's Stacking Beltboxes & Compact Loaders,shanemadden,28/08/2026
 V1.0.4,0.4.0,Diesel Engine,Talandar99,11/01/2026
+V2.0.0,2.0.1,Disco Science,danielbrauer,28/08/2026
 V1.0.4,0.0.4,Distant Shores,micaalle,11/01/2026
+V2.0.0,0.8.18,Dredgeworks,Kubius,28/08/2026
+V2.0.0,1.0.0,Dredgeworks: Frozen Reaches,Kubius,28/08/2026
 V1.0.3,0.3.9,Dynamic Rain,valertron,07/12/2025
 V1.0.2,0.0.3,Early Elevated Rails,Marcel171297,15/11/2025
+V2.0.0,1.0.1,Electric Furnaces,Fah44d,28/08/2026
 V1.0.0,1.4.7,Elevated pipes,Quezler & Redotix99,11/11/2025
+V2.0.0,1.0.5,Enhanced Shadows,MeteorSwarm,28/08/2026
 V1.0.3,2.0.0,Even More Text Plates,Zengineer,07/12/2025
 V1.0.5,1.4.0,Extra Storage Tanks: Tiny Storage Tanks,"ZarSasha, Aurora & Moonlight",12/02/2026
-V1.0.3,2.7.5,Factorio+,Fishbus,07/12/2025
+V2.0.0,2.0.15,Factorio and Conquer: Tiberian Dawn,JamesFire,28/08/2026
 V1.0.4,0.3.4,Factorio Data Standards Library,SafTheLamb,11/01/2026
+V2.0.0,0.16.5,Factorio Library,raiguard,28/08/2026
+V2.0.0,2.1.5,Factorio World,TheOddler,28/08/2026
+V1.0.3,2.7.5,Factorio+,Fishbus,07/12/2025
 V1.0.4,3.11.16,Factorissimo 3,MagmaMcFry & notnotmelon,11/01/2026
+V2.0.0,1.0.2,Fill4Me,kovus,28/08/2026
+V2.0.0,0.2.24,Filter Helper,Mudscape,28/08/2026
+V2.0.0,2.3.2,Flare Stack for 2.0 (Deprecated - use original),xxehanort,28/08/2026
+V2.0.0,0.9.9,Fluid Level Indicator,kmecseki,28/08/2026
 V1.0.0,1.4.4,Fluid Must Flow,"Linver, Krastor & raiguard",11/11/2025
 V1.0.3,1.0.5,Fluid recycler,Powerscooter,07/12/2025
 V1.0.3,1.0.2,Fluroflux: Stingfrond Agriculture,LordMiguel,07/12/2025
 V1.0.0,0.4.0,Fracking Tower,GammaDelta,11/11/2025
+V1.0.4,3.0.9,Fundryu,Azertyyu,11/01/2026
 V1.0.5,0.0.13,Fusion Machines,Talandar99,12/02/2026
 V1.0.0,1.0.6,Fusion Robots,Acouya,11/11/2025
-V1.0.4,3.0.9,Fundryu,Azertyyu,11/01/2026
+V2.0.0,0.3.0,Game Speed Button,0n0w1c,28/08/2026
+V2.0.0,2.0.1,GUI Unifier,snouz,28/08/2026
 V1.0.3,2.0.10,HD planets,OwnlyMe,07/12/2025
 V1.0.4,1.1.8,HD Plasma Duct,Powerscooter & Keysivi,11/01/2026
 V1.0.2,1.2.6,Heat Inserter,Kryzeth,15/11/2025
 V1.0.3,2.0.7,Heat-resistant Pipes,NOiZE,07/12/2025
+V2.0.0,2.2.14,Helmod,Helfima,28/08/2026
+V2.0.0,2.0.4,Hovercrafts,Arcani_Victus,28/08/2026
+V2.0.0,1.0.5,Infinite Quality Tiers,notnotmelon,28/08/2026
+V2.0.0,1.0.4,Inserter Fuel Leech,Oktokolo,28/08/2026
+V2.0.0,1.0.3,Item Network SA,djmalk,28/08/2026
+V2.0.0,0.4.17,Jetpack,Earendel,28/08/2026
+V2.0.0,2.0.19,Krastorio 2,raiguard,28/08/2026
+V2.0.0,1.2.2,Krastorio 2 - Air Purifier,Tarckmhog,28/08/2026
+V2.0.0,1.6.21,Krastorio 2 Spaced Out,Polka_37,28/08/2026
 V1.0.4,0.2.3,Larger Lamps 2.0,"Deadlock989, Goakiller900, MasterBuilder & NullHarp",11/01/2026
+V2.0.0,2.0.12,Laser Tanks,OwnlyMe,28/08/2026
 V1.0.0,0.4.3,Legacy Train Model,aspct,11/11/2025
+V2.0.0,1.0.1,Li-Quarry,lost-in,28/08/2026
+V2.0.0,0.2.2,Light Overhaul,Earendel,28/08/2026
+V2.0.0,2.6.0,Lignumis,cackling.fiend,28/08/2026
 V1.0.6,2.0.0,Logistic Technology Beacon 2.0,cosinusek,24/06/2026
 V1.0.2,1.0.9,Logistics Insights,farzag,15/11/2025
 V1.0.4,2.1.0,Long range delivery drones (fork),Talandar99,11/01/2026
+V2.0.0,2.9.0,LTN - Logistic Train Network,Optera,28/08/2026
+V2.0.0,1.0.1,LTN - Space Exploration Integration,hgschmie,28/08/2026
+V2.0.0,2.2.7,LTN Combinator Modernized,kryojenik,28/08/2026
+V2.0.0,0.5.3,LTN Manager,nihilistzsche,28/08/2026
 V1.0.5,0.1.5,Lubrication Tower,Talandar99,12/02/2026
 V1.0.0,1.1.7,Lunar Panel,KilangCuka,11/11/2025
+V2.0.0,1.0.7,Magical Quarries,Yoshirakou,28/08/2026
 V1.0.3,1.3.0,Manufacturer,Velaanix,07/12/2025
-V1.0.0,2.0.5,Minimal Electric Rails,snouz,11/11/2025
+V2.0.0,1.2.1,Materials Easy,NikodusLP,28/08/2026
+V2.0.0,200.0.53,Max Rate Calculator,Theanderblast,28/08/2026
+V2.0.0,2.1.1,Mega Bot Start,ZeroSerenity,28/08/2026
+V2.0.0,0.1.20,Metal and Stars,5forsilver,28/08/2026
+V2.0.0,1.4.7,Milestones,Wiwiweb,28/08/2026
 V1.0.2,2.0.0,Mini Trains,Klonan & Sacredanarchy,15/11/2025
 V1.0.2,1.2.4,Mini Trains Lead the Way,Indzasa,15/11/2025
-V1.0.4,1.0.26,Molten plastic,Powerscooter,11/01/2026
+V1.0.0,2.0.5,Minimal Electric Rails,snouz,11/11/2025
+V2.0.0,2.1.0,Mining Drones,Klonan,28/08/2026
 V1.0.3,1.1.4,Missile Defense Systems [SA],kafoaai,07/12/2025
+V2.0.0,2.0.1,Modify Silo Max Weight,Ikamusme,28/08/2026
+V1.0.4,1.0.26,Molten plastic,Powerscooter,11/01/2026
+V2.0.0,2.0.3,More Roboports,b4Bu,28/08/2026
+V2.0.0,0.0.10,Mower,Qon,28/08/2026
+V2.0.0,0.2.3,Multiplayer UI,bykoow,28/08/2026
+V2.0.0,0.5.0,Multiple Characters,mathegenie03,28/08/2026
+V2.0.0,1.1.6,Muluna graphics,MeteorSwarm,28/08/2026
+V2.0.0,1.0.2,Muluna Utility Constants,MeteorSwarm,28/08/2026
+V2.0.0,2.7.13,"Muluna, Moon of Nauvis",MeteorSwarm,28/08/2026
 V1.0.6,0.2.1,No Solid Fuel Vehicles,valertron,24/06/2026
+V2.0.0,2.1.24,Oarc Multiplayer Spawn,Oarc,28/08/2026
+V2.0.0,2.0.0,Ore Eraser,tergiver,28/08/2026
 V1.0.0,0.14.0,Ore-ganizer,0n0w1c,11/11/2025
 V1.0.3,0.7.4,Parallel Research,Tename,07/12/2025
-V1.0.4,1.16.3,PlanetLib,thesixthroc,11/01/2026
+V2.0.0,2.4.4,Pipe Visualizer 2.0,Ashier,28/08/2026
 V1.0.5,0.1.1,Planet Akularis,rjdunlap,12/02/2026
 V1.0.2,5.0.1,Planet Belt Portal,agaede22,15/11/2025
+V2.0.0,0.5.4,Planet Castra,Bartz24,28/08/2026
 V1.0.5,1.0.30,Planet Foliax,Crethor,12/02/2026
 V1.0.5,0.1.3,Planet Hexalith,rjdunlap,12/02/2026
 V1.0.5,1.31.2,Planet Maraxsis,notnotmelon,12/02/2026
+V2.0.0,1.0.5,Planet Omnia,Wwombatt,28/08/2026
 V1.0.4,0.43.1,Planet Pelagos,Talandar99,11/01/2026
 V1.0.0,2.1.9,Planet Vesta,CPU_BlackHeart,11/11/2025
+V1.0.4,1.16.3,PlanetsLib,thesixthroc,11/01/2026
+V1.0.0,0.0.312,Plasma Accelerator,ArkadiPorovozov,11/11/2025
 V1.0.4,1.0.2,Plasma Handling,Powerscooter,11/01/2026
 V1.0.4,1.0.21,Plasma Industries,Powerscooter,11/01/2026
-V1.0.0,0.0.312,Plasma Accelerator,ArkadiPorovozov,11/11/2025
+V2.0.0,1.8.1,Plutonium Energy,JohnTheCoolingFan,28/08/2026
 V1.0.5,0.9.0,Pneumatic Mining Drill,Wolbobus,12/02/2026
+V2.0.0,2.0.0,Pollution as surface property,cackling.fiend,28/08/2026
 V1.0.6,1.0.3,Posted Signals,O5MO,24/06/2026
 V1.0.4,1.0.2,Promethium Belts,Helios467,11/01/2026
+V2.0.0,2.0.4,Quality condenser,Quezler,28/08/2026
 V1.0.4,0.2.5,Quantum emitter,Azertyyu,11/01/2026
 V1.0.4,0.1.14,Quantum Lab,Azertyyu,11/01/2026
+V2.0.0,3.3.8,Rate Calculator,raiguard,28/08/2026
 V1.0.0,1.0.3,Reach Equipment,BetweenWalls,11/11/2025
 V1.0.6,1.1.9,Repair Turret 2,tiko13,24/06/2026
+V2.0.0,7.0.26,Resource Spawner Overhaul,orzelek,28/08/2026
 V1.0.4,0.0.1,Robocharger Factorio 2.0,Smurph & briel1235,11/01/2026
+V2.0.0,1.2.1,Roboport Range Multiplier,Jobus,28/08/2026
 V1.0.6,1.1.0,Rocket silos can buffer more rockets,Quezler & username9999,24/06/2026
-V1.0.5,1.1.0,Scrap Toolkit,"SafTheLamb & S6X",12/02/2026
-V1.0.3,1.1.3,Scrappy Industry,SafTheLamb,07/12/2025
+V2.0.0,0.18.9,RPG Items,OwnlyMe,28/08/2026
+V2.0.0,2.0.8,RPG System,MFerrari,28/08/2026
+V2.0.0,2.0.2,Schall Transport Group,Schallfalke,28/08/2026
+V2.0.0,3.0.2,Science Pack Drops,Khalcifer,28/08/2026
+V1.0.5,1.1.0,Scrap Toolkit,SafTheLamb & S6X,12/02/2026
 V1.0.4,0.5.6,Scrappy Chemistry,SafTheLamb,11/01/2026
+V1.0.3,1.1.3,Scrappy Industry,SafTheLamb,07/12/2025
+V2.0.0,2.0.7,Shortcuts,ickputzdirwech,28/08/2026
+V2.0.0,1.0.8,Solar Matrix,Sacredanarchy,28/08/2026
+V2.0.0,0.7.57,Space Exploration,Earendel,28/08/2026
+V2.0.0,0.7.1,Space Exploration LTN integration,harag,28/08/2026
+V2.0.0,0.7.4,Space Exploration Menu Simulations,Earendel,28/08/2026
+V2.0.0,0.7.5,Space Exploration Postprocess (Required),Earendel,28/08/2026
 V1.0.5,1.10.8,Spidertron Enhancements,Xorimuth,12/02/2026
 V1.0.5,2.6.3,Spidertron Patrols,Xorimuth,12/02/2026
+V2.0.0,0.1.5,Squeak Through 2,_CodeGreen,28/08/2026
 V1.0.0,2.2.0,StarMap Background,Tserup,11/11/2025
+V2.0.0,0.1.0,Stirling Generator,Kubius,28/08/2026
 V1.0.2,0.1.7,Sushi Splitters,TeXiCiTy,15/11/2025
+V2.0.0,1.2.0,Telogistics,S6X,28/08/2026
+V2.0.0,0.2.1,Tenebris,Big_J,28/08/2026
+V2.0.0,1.3.10,Tenebris Prime,MeteorSwarm,28/08/2026
 V1.0.0,0.7.2,Text Plates,Earendel & gheift,11/11/2025
+V2.0.0,2.2.1,Tier 4 Modules,Porkchop13,28/08/2026
+V2.0.0,1.0.6,Tile Upgrade Planner (Muluna Fork),MeteorSwarm,28/08/2026
+V2.0.0,1.2.4,TinyStart 2,et508,28/08/2026
+V2.0.0,19.15.2,Todo List,JasonMiles,28/08/2026
+V2.0.0,1.0.26,Transport Drones,meglinge,28/08/2026
 V1.0.2,2.0.4,Tungsten,cackling.fiend & Brevven,15/11/2025
+V2.0.0,1.1.0,Ultimate Research Queue (1.1 ONLY),raiguard,28/08/2026
+V2.0.0,2.1.0,Unlimited Productivity and Quality 2.0 Compat Fork,mcmodderHD,28/08/2026
+V2.0.0,2.0.4,Updated Construction Drones,Tubbles,28/08/2026
+V2.0.0,2.2.0,Valves,Stringweasel,28/08/2026
+V2.0.0,1.0.0,Valves Library,Stringweasel,28/08/2026
 V1.0.4,1.0.2,Various Cargo Bays,Powerscooter,11/01/2026
+V2.0.0,1.7.2,Visible Planets in Space,Nauviax,28/08/2026
 V1.0.3,2.7.3,Voidcraft,S6X,07/12/2025
+V2.0.0,1.5.5,Waterfill (Ritn),Ritn,28/08/2026
+V2.0.0,2.0.5,Waterfill (v17),untraceablesmurf,28/08/2026
 V1.0.6,0.3.1,Winter Is Coming,valertron,24/06/2026
 V1.0.5,0.1.6,Wire Lamps,peterwolf.pl,12/02/2026
+V2.0.0,1.4.1,Wood Walls and floors,zanven,28/08/2026
+V2.0.0,2.0.0,Wooden Gleba: Water Cane,cackling.fiend,28/08/2026
 V1.0.4,2.1.8,Wooden Industry,SafTheLamb,11/01/2026
 V1.0.3,2.5.5,Wooden Logistics,SafTheLamb,07/12/2025
 V1.0.6,0.2.3,Wooden Moshine: Solaponics,SafTheLamb,24/06/2026
 V1.0.5,0.1.2,Wooden Platform,Talandar99,12/02/2026
+V2.0.0,1.2.23,Yuoki Industries,YuokiTani,28/08/2026
