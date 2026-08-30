@@ -1,18 +1,25 @@
+Version: 2.0.1
+Date: 28/08/2026
+  Alterações:
+    - Correções gerais com o glossário de diversos itens e entidades, como "Perfuratriz(es)" -> "Mineradora(s)", "Esteira de transporte" -> "Esteira", "Roboporto(s)" -> "Roboport(s)" e diversos outros nomes.
+    - Alguns nomes foram alterados para se adequarem aos itens descritos oficialmente nas traduções do jogo, mesmo em mods que possuam traduções disponíveis no crowdin em alguns casos, de modo a tornar toda a tradução mais coesa, caso ativada a partir deste pacote.
+  Problemas conhecidos:
+    - No mod Alien Biomes, o nome dos blocos de chão são ordenados como "Tamanho" e "Tipo", essa configuração soa errada em pt-br, uma vez que ficará como "Cinza Terra", ao invés de "Terra cinza". A tradução é feita de forma hardcoded na configuração do mod, não sendo possível alterar a ordem manualmente atráves do .cfg, uma proposta de inclusão para tornar essa alteração possível foi enviada ao desenvolvedor do mod.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 28/08/2026
-  Features:
+  Recursos:
     - Reestruturação do pacote como hub canônico de tradução pt-BR para mods do Factorio.
-    - Versão do pacote saltada para 2.0.0 para marcar o marco de cobertura autônoma integral do ecossistema (242 mods).
+    - Versão do pacote atualizada para 2.0.0 para marcar o marco de cobertura autônoma integral do ecossistema (242 mods).
     - Alvo do jogo ajustado para a versão 2.0; método de duplo lançamento 2.0/2.1 documentado e roteirizado.
     - Governança de repositório: LICENSE (MIT + concessão de reuso irrestrito das strings de locale/), CONTRIBUTING.md com glossário canônico pt-BR, CODE_OF_CONDUCT.md, CLAUDE.md, .gitattributes e .gitignore.
     - Ferramentas de manutenção em tools/ (validação de locale, glossário, tabela de mods, formato do changelog, empacotamento) e workflow de CI no GitHub.
-  Changes:
-    - Estratégia definida: pacote autônomo (cobertura integral do ecossistema) que também funciona como fallback, com prioridade dos pacotes nativos AAI/LTN/Bob's por paridade de texto. Regras registradas em CLAUDE.md secoes 3, 11 e 12 e em CONTRIBUTING.md.
+  Alterações:
+    - Estratégia definida: pacote autônomo (cobertura integral do ecossistema) que também funciona como fallback, com prioridade dos pacotes nativos AAI/LTN/Bob's por paridade de texto. Regras registradas em CLAUDE.md seções 3, 11 e 12 e em CONTRIBUTING.md.
     - Lista de dependências opcionais do info.json reconstruída a partir de mods.csv, em ordem alfabética e sem depender de pacotes de idioma de terceiros.
     - Terminologia unificada ao glossário do jogo base em pt-BR (Insersor, Esteira de transporte, Máquina de montagem, Transmissor, Perfuratriz, Baú, entre outros).
     - Glossário revisado: "Tile" traduzido como "Bloco" (antes "Ladrilho"); "Blueprint"/"Blueprint Book" mantidos como "Projeto"/"Livro de Projetos".
-  Locale:
+  Localização:
     - +143 mods adicionados ao pacote (total: 242). Destaques: ecossistema AAI completo, Bob's Mods, Krastorio 2, Space Exploration, Angel's Refining e Petrochem, Yuoki Industries, Cerys, Maraxsis, Muluna, Castra, Tenebris, Helmod e dezenas de utilitários e melhorias de qualidade de vida.
     - Absorvidas e sanitizadas as traduções do pacote YKR (Era Espacial e planetas adicionais), com correção de marcadores de interpolação, acentuação e capitalização.
     - Cobertura de lacunas de pt-BR dos ecossistemas AAI e LTN; onde há sobreposição com os pacotes nativos, o texto é cópia fiel da versão atual deles (mesma origem no Crowdin). 372 chaves ingeridas verbatim dos pacotes AAI/LTN Language Pack por tools/ingest_sources.py.
@@ -23,11 +30,10 @@ Date: 28/08/2026
     - Pipeline IA — Tier B (ecossistemas de produção): 33 chaves novas em Factorio-Tiberium (16, "Tiberium" mantido sem traduzir por precedente), metal-and-stars (6), Bob's Tech/Power/Plates/Warfare/Logistics/Ores (9), Factorissimo 3 (1) e Krastorio 2 (1). A lacuna real do Tier B era 33 e não ~280 — o restante já estava coberto pelo locale/pt-BR/ dos próprios mods.
     - Pipeline IA — Tier C (QoL e planetas menores): 65 chaves novas em PlanetsLib (13), Mining Drones (13), MegaBotStart (11), Cerys - Moon of Fulgora (8), Rate Calculator (5), Spidertron Patrols (5), Better Starmap Background (4), Cargo Ships (2), Cubium (1), Light Overhaul (1), BottleneckLite (1) e Better Chat (1). Termos alinhados aos precedentes de cada arquivo ("drone de mineração", "Automação de mecha").
     - Saneamento dos arquivos .cfg existentes: quebra de linha final, remoção de espaços à direita, ausência de BOM e de CRLF.
-  Info:
+  Informações:
     - README.md enxugado (thumbnail centralizada, badges de versão/downloads/CI, bloco de status); a tabela completa de mods passou para MODS.md, gerada de mods.csv por tools/gen_mods_table.py e incluída no pacote publicado.
     - Crédito da base de tradução ao projeto comunitário factorio-mods-localization (github.com/dima74/factorio-mods-localization / Crowdin) e a seus contribuidores. Coordenação: Or4cu1o; autoria original do mod: Slondo.
     - Limitações conhecidas: o mod "RPM-RW Kernbohrer" não possui localização de origem em inglês (template em alemão) e ficou fora do pacote; cerca de 65 chaves de 5 micro-mods deslistados do portal não puderam ser recuperadas.
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.6
 Date: 24/06/2026

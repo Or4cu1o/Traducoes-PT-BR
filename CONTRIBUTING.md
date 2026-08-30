@@ -111,14 +111,14 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Inserter | Insersor | |
 | Burner Inserter | Insersor a combustão | |
 | Fast Inserter | Insersor rápido | |
-| Long-handed Inserter | Insersor de longo alcance | |
-| Bulk Inserter | Insersor em massa | (ex-"Stack Inserter") |
+| Long-handed Inserter | Insersor de longo-alcance | |
+| Bulk Inserter | Insersor de alto desempenho | |
 | Belt | Esteira | |
-| Transport Belt | Esteira de transporte | |
-| Fast Transport Belt | Esteira de transporte rápida | |
-| Express Transport Belt | Esteira de transporte expressa | |
+| Transport Belt | Esteira | |
+| Fast Transport Belt | Esteira rápida | |
+| Express Transport Belt | Esteira expressa | |
 | Underground Belt | Esteira subterrânea | |
-| Splitter | Divisor | |
+| Splitter | Separador | |
 | Loader | Carregador | |
 | Chest | Baú | |
 | Wooden Chest | Baú de madeira | |
@@ -126,11 +126,11 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Steel Chest | Baú de aço | |
 | Storage Tank | Tanque de armazenamento | |
 | Logistic Chest | Baú logístico | |
-| Passive Provider Chest | Baú fornecedor passivo | revisar |
-| Active Provider Chest | Baú fornecedor ativo | revisar |
-| Requester Chest | Baú solicitante | revisar |
-| Buffer Chest | Baú tampão | revisar |
-| Storage Chest | Baú de estoque | revisar |
+| Passive Provider Chest | Baú provedor passivo | |
+| Active Provider Chest | Baú provedor ativo | |
+| Requester Chest | Baú solicitador | |
+| Buffer Chest | Baú buffer | |
+| Storage Chest | Baú de armazenagem | |
 
 ### 5.2 Produção
 
@@ -152,26 +152,26 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Productivity Module | Módulo de produtividade | |
 | Efficiency Module | Módulo de eficiência | |
 | Quality Module | Módulo de qualidade | |
-| Beacon | Emissor | revisar |
-| Foundry | Fundição | |
-| Electromagnetic Plant | Usina eletromagnética | |
+| Beacon | Transmissor | |
+| Foundry | Forja | |
+| Electromagnetic Plant | Planta eletromagnética | |
 | Biochamber | Biocâmara | |
 | Recycler | Reciclador | |
 | Agricultural Tower | Torre agrícola | |
-| Cryogenic Plant | Usina criogênica | revisar |
+| Cryogenic Plant | Planta criogênica | |
 
 ### 5.3 Mineração e fluidos
 
 | EN | PT-BR | Nota |
 |---|---|---|
-| Burner Mining Drill | Perfuratriz a combustão | |
-| Electric Mining Drill | Perfuratriz elétrica | |
-| Big Mining Drill | Perfuratriz grande | revisar |
+| Burner Mining Drill | Mineradora a combustão | |
+| Electric Mining Drill | Mineradora elétrica | |
+| Big Mining Drill | Mineradora elétrica grande | |
 | Pumpjack | Bomba de petróleo | |
 | Pipe | Cano | |
 | Pipe to Ground | Cano subterrâneo | |
 | Pump | Bomba | |
-| Offshore Pump | Bomba costeira | revisar |
+| Offshore Pump | Bomba hidráulica | |
 | Boiler | Caldeira | |
 | Heat Pipe | Cano de calor | |
 | Heat Exchanger | Trocador de calor | |
@@ -193,27 +193,27 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Substation | Subestação | |
 | Power Switch | Interruptor de energia | |
 | Lightning Rod | Para-raios | |
-| Lightning Collector | Coletor de relâmpagos | revisar |
+| Lightning Collector | Para-raio avançado | |
 
 ### 5.5 Robôs e rede logística
 
 | EN | PT-BR | Nota |
 |---|---|---|
-| Roboport | Roboporto | |
+| Roboport | Roboport | |
 | Logistic Robot | Robô logístico | |
 | Construction Robot | Robô de construção | |
 | Logistic Network | Rede logística | |
-| Personal Roboport | Roboporto pessoal | |
+| Personal Roboport | Roboport pessoal | |
 
 ### 5.6 Circuitos e trens
 
 | EN | PT-BR | Nota |
 |---|---|---|
 | Circuit Network | Rede de circuitos | |
-| Arithmetic Combinator | Combinador aritmético | |
-| Decider Combinator | Combinador decisor | |
+| Arithmetic Combinator | Combinador de aritmética | |
+| Decider Combinator | Combinador de decisão | |
 | Constant Combinator | Combinador constante | |
-| Selector Combinator | Combinador seletor | revisar |
+| Selector Combinator | Combinador de seleção | |
 | Locomotive | Locomotiva | |
 | Cargo Wagon | Vagão de carga | |
 | Fluid Wagon | Vagão de fluidos | |
@@ -227,7 +227,7 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | EN | PT-BR | Nota |
 |---|---|---|
 | Space Platform | Plataforma espacial | |
-| Space Platform Hub | Central da plataforma espacial | revisar |
+| Space Platform Hub | Central da plataforma espacial | |
 | Cargo Bay | Compartimento de carga | |
 | Cargo Landing Pad | Plataforma de pouso de carga | |
 | Asteroid | Asteroide | |
@@ -252,18 +252,18 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Spoilage | Deterioração | |
 | to spoil | deteriorar | |
 | Freshness | Frescor | revisar |
-| Pentapod | Pentápode | revisar |
+| Pentapod | Pentapod | |
 | Rocket Turret | Torre de foguetes | |
-| Railgun | Canhão de trilho | revisar |
+| Railgun | Canhão elétrico | |
 | Tesla Turret | Torre Tesla | |
 
 ### 5.9 Materiais e intermediários
 
 | EN | PT-BR | Nota |
 |---|---|---|
-| Iron Plate | Placa de ferro | |
-| Copper Plate | Placa de cobre | |
-| Steel Plate | Placa de aço | |
+| Iron Plate | Chapa de ferro | |
+| Copper Plate | Chapa de cobre | |
+| Steel Plate | Viga de aço | |
 | Iron Gear Wheel | Engrenagem de ferro | |
 | Copper Cable | Cabo de cobre | |
 | Electronic Circuit | Circuito eletrônico | |
@@ -273,9 +273,9 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Sulfur | Enxofre | |
 | Sulfuric Acid | Ácido sulfúrico | |
 | Battery | Bateria | |
-| Engine Unit | Unidade de motor | |
-| Electric Engine Unit | Unidade de motor elétrico | |
-| Flying Robot Frame | Estrutura de robô voador | |
+| Engine Unit | Motor | |
+| Electric Engine Unit | Motor elétrico | |
+| Flying Robot Frame | Chassi de robô voador | |
 | Low Density Structure | Estrutura de baixa densidade | |
 | Rocket Fuel | Combustível de foguete | |
 | Nuclear Fuel | Combustível nuclear | |
@@ -298,18 +298,18 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 
 | EN | PT-BR | Nota |
 |:---:|:---:|:---:|
-| Automation Science Pack | Pacote de ciência de automação | |
-| Logistic Science Pack | Pacote de ciência de logística | |
-| Military Science Pack | Pacote de ciência militar | |
-| Chemical Science Pack | Pacote de ciência química | |
-| Production Science Pack | Pacote de ciência de produção | |
-| Utility Science Pack | Pacote de ciência de utilidade | |
-| Space Science Pack | Pacote de ciência espacial | |
-| Metallurgic Science Pack | Pacote de ciência metalúrgica | revisar |
-| Electromagnetic Science Pack | Pacote de ciência eletromagnética | revisar |
-| Agricultural Science Pack | Pacote de ciência agrícola | revisar |
-| Cryogenic Science Pack | Pacote de ciência criogênica | revisar |
-| Promethium Science Pack | Pacote de ciência de promécio | revisar |
+| Automation Science Pack | Pacote científico de automação | |
+| Logistic Science Pack | Pacote científico de logística | |
+| Military Science Pack | Pacote científico militar | |
+| Chemical Science Pack | Pacote científico de química | |
+| Production Science Pack | Pacote científico de produção | |
+| Utility Science Pack | Pacote científico de utilitários | |
+| Space Science Pack | Pacote científico espacial | |
+| Metallurgic Science Pack | Pacote científico de metalurgia | |
+| Electromagnetic Science Pack | Pacote científico de eletromagnetismo | |
+| Agricultural Science Pack | Pacote científico agricultura | |
+| Cryogenic Science Pack | Pacote científico de criogenia | |
+| Promethium Science Pack | Pacote científico de Prometheus | |
 
 ### 5.11 Interface e termos gerais
 
@@ -330,8 +330,8 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Tooltip | Dica | |
 | Achievement | Conquista | |
 | Surface | Superfície | |
-| Tile | Bloco | revisar |
-| Roboport | Roboporto | ver §5.7 |
+| Tile | Bloco | |
+| Roboport | Roboport | |
 
 ## 6. Termos a **não** traduzir
 

@@ -43,11 +43,11 @@
 - Quando um termo aparece em mais de uma subseção, a **primeira** linha vence
   (ex.: §5.7 antes de §5.11).
 - Termos estáveis (consulte a tabela completa antes de traduzir):
-  `Inserter → Insersor`, `Transport belt → Esteira de transporte`,
+  `Inserter → Insersor`, `Transport belt → Esteira`,
   `Assembling machine → Máquina de montagem`, `Beacon → Transmissor`,
-  `Drill → Perfuratriz`, `Chest → Baú`, `Roboport → Roboporto`,
+  `Drill → Mineradora`, `Chest → Baú`,
   `Tile → Bloco`, `Blueprint → Projeto`, `Blueprint book → Livro de Projetos`,
-  `stacking → empilhamento`, `Splitter → Divisor`.
+  `stacking → empilhamento`, `Splitter → Separador`.
 - Nomes em _sentence case_ (só a 1ª letra maiúscula). Vírgula decimal
   (`0,8`, não `0.8`). Termos a **não** traduzir: `CONTRIBUTING.md` §6.
 
