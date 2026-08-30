@@ -11,7 +11,7 @@
   <a href="https://github.com/odnols/Traducoes-PT-BR/actions/workflows/validate.yml"><img alt="Pipeline de automação" src="https://github.com/odnols/Traducoes-PT-BR/actions/workflows/validate.yml/badge.svg"></a>
   <a href="CLAUDE.md"><img alt="Tradução: Crowdin + IA" src="https://img.shields.io/badge/tradu%C3%A7%C3%A3o-Crowdin%20%2B%20IA-8a2be2"></a>
   <a href="LICENSE"><img alt="Licença" src="https://img.shields.io/github/license/odnols/Traducoes-PT-BR?color=555"></a>
-  <a href="MODS.md"><img alt="Mods cobertos" src="https://img.shields.io/badge/mods-235-2ea44f"></a>
+  <a href="MODS.md"><img alt="Mods cobertos" src="https://img.shields.io/badge/mods-237-2ea44f"></a>
 </p>
 
 Pacote de tradução **pt-BR** para mods do Factorio. Funciona de forma
@@ -28,7 +28,7 @@ prevalece nas chaves em comum.
 
 | | |
 |---|---|
-| Mods cobertos | **235** — lista completa em [`MODS.md`](MODS.md) |
+| Mods cobertos | **237** — lista completa em [`MODS.md`](MODS.md) |
 | _Releases_ no portal | 7 (desde 11/11/2025) |
 | Ciclo de atualização | uma grande atualização a cada 1–2 meses |
 | Alvo | Factorio **2.0** (variante 2.1 roteirizada) |
