@@ -97,6 +97,9 @@ Ficam na raiz do _workspace_, um nível acima, e **não entram no PR**:
 | `check_changelog.py` | valida o formato de `changelog.txt` (separador de 99 `-`, `Version:`, `Date: DD/MM/AAAA`, categorias, indentação) |
 | `check_collisions.py` | lista `[secao] chave` definidas em >=2 `.cfg` com textos divergentes; `--check` falha no CI se surgir uma fora de `tools/collisions-baseline.txt` |
 | `build_release.py --target 2.0\|2.1` | carimba `info.json.factorio_version` e empacota em `dist/` |
+| `check_version_bump.py --old-ref <sha>` | compara `info.json.version` entre revisões; erro se retroceder, `changed=`/`version=` em `$GITHUB_OUTPUT` |
+| `changelog_extract.py X.Y.Z` | imprime o corpo do bloco `Version: X.Y.Z` do changelog (notas da release) |
+| `portal_upload.py --zip <z>` | publica o `.zip` no portal (Mod Upload API v2); usa `FACTORIO_PORTAL_API_KEY` |
 
 `tools/` e `.github/` ficam no repositório, mas `build_release.py` os
 **exclui** do `.zip` publicado no portal.
@@ -128,6 +131,12 @@ Para cada `.cfg`:
 6. `python3 tools/check_changelog.py changelog.txt`
 7. `python3 tools/gen_mods_table.py --check`
 8. `python3 tools/build_release.py --target 2.0` → `dist/slondo-ptbr_X.Y.Z.zip`
+
+Automação: um push em `main` que **suba** `info.json.version` dispara
+`.github/workflows/release.yml` → valida, empacota, cria o GitHub Release
+`vX.Y.Z` e envia ao portal (`portal_upload.py`, se `FACTORIO_PORTAL_API_KEY`
+estiver configurado). Retrocesso de versão falha o workflow
+(`check_version_bump.py`).
 
 ## 9. Método de duplo lançamento 2.0 / 2.1
 
