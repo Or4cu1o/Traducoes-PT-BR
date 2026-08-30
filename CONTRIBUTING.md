@@ -61,17 +61,32 @@ com espaço **entre** dois marcadores é legítimo.
 
 ## 3. Fluxo de contribuição
 
-1. Faça um _fork_ e crie um _branch_ descritivo (`traducao/<mod>`,
-   `correcao/<mod>`).
-2. Rode a validação local antes de commitar:
+1. **Com acesso de escrita:** trabalhe direto na `main`. **Sem acesso:** faça um
+   _fork_ e um _branch_ descritivo (`traducao/<mod>`, `correcao/<mod>`) e abra um
+   _Pull Request_.
+2. Rode a validação local **completa** antes de commitar (ou o comando
+   `/validar` no Claude Code):
    ```bash
-   python3 tools/validate_locale.py locale/pt-BR
+   python3 tools/build_glossary.py --check
+   python3 tools/validate_locale.py --strict locale/pt-BR
+   python3 tools/validate_locale.py --standalone --source-mods ../_source_mods locale/pt-BR
+   python3 tools/check_changelog.py changelog.txt
+   python3 tools/gen_mods_table.py --check
+   python3 tools/check_collisions.py --check
    ```
-3. _Commits_ no formato convencional: `feat:`, `fix:`, `chore:`, `docs:`.
+3. _Commits_ no formato convencional: `feat:`, `fix:`, `chore:`, `docs:`, `ci:`.
    Um _commit_ temático por mod ou por lote de correção.
-4. Abra o _Pull Request_ descrevendo os mods afetados e a fonte das traduções
-   (Crowdin, upstream do mod, YKR, tradução nova).
+4. No PR (ou no corpo do commit) descreva os mods afetados e a fonte das
+   traduções (Crowdin, upstream do mod, YKR, tradução nova). Se as chaves novas
+   **não** passaram pelo _loop_ de consenso Gemini+Sonnet (§ pipeline IA), diga.
 5. A CI (`.github/workflows/validate.yml`) precisa passar.
+
+> **Usando Claude Code?** As regras completas do projeto estão em
+> [`.claude/rules/traducao-pt-br.md`](.claude/rules/traducao-pt-br.md) e são
+> carregadas automaticamente. O _loop_ de tradução multimodal usa o CLI `agy`
+> (Antigravity) e o plugin
+> <https://github.com/Or4cu1o/antigravity-plugin-cc>; sem eles, vale o **modo
+> fallback** (tradução em modelo único + auto-revisão + validação completa).
 
 ## 4. Regras de tradução
 

@@ -24,3 +24,6 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Claude Code — configuração pessoal do colaborador (não compartilhar)
+.claude/settings.local.json

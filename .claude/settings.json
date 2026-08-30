@@ -1,0 +1,17 @@
+{
+  "$comment": "Configuração compartilhada do projeto. Regras de conduta para o Claude estão em .claude/rules/ (carregadas via @-import no CLAUDE.md da raiz). Ajustes pessoais vão em .claude/settings.local.json (não versionado).",
+  "permissions": {
+    "allow": [
+      "Bash(python3 tools/validate_locale.py:*)",
+      "Bash(python3 tools/build_glossary.py:*)",
+      "Bash(python3 tools/check_changelog.py:*)",
+      "Bash(python3 tools/gen_mods_table.py:*)",
+      "Bash(python3 tools/check_collisions.py:*)",
+      "Bash(python3 tools/check_version_bump.py:*)",
+      "Bash(python3 tools/build_release.py:*)",
+      "Bash(python3 tools/release_notes.py:*)",
+      "Bash(python3 tools/changelog_extract.py:*)",
+      "Bash(python3 -m json.tool info.json)"
+    ]
+  }
+}

@@ -3,6 +3,14 @@
 Documento de arquitetura e manutenção do pacote **Traduções pt-BR**. Para o
 fluxo de contribuição e o glossário, veja [CONTRIBUTING.md](CONTRIBUTING.md).
 
+> **Regras operacionais (carregadas automaticamente pelo Claude Code):**
+> @.claude/rules/traducao-pt-br.md
+>
+> Esse arquivo é o contrato que **toda sessão de Claude Code neste repositório
+> deve seguir à risca** — inclusive quando o colaborador não tem o Antigravity
+> (`agy`) e o [plugin de tradução multimodal](https://github.com/Or4cu1o/antigravity-plugin-cc):
+> nesse caso vale o _modo fallback_ da §7.
+
 ## 1. O que é este mod
 
 - Mod **somente locale** para o Factorio: entrega apenas `locale/pt-BR/*.cfg`.
