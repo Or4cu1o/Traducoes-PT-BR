@@ -56,8 +56,7 @@ A base de tradução vem do projeto comunitário
 **[factorio-mods-localization](https://github.com/dima74/factorio-mods-localization)**
 ([Crowdin](https://crowdin.com/project/factorio-mods-localization)) e de seus
 tradutores. Onde o Crowdin não cobre, o texto é gerado pelo pipeline
-**Crowdin + IA** descrito em [`CLAUDE.md`](CLAUDE.md) e revisado contra o
-glossário canônico ([`CONTRIBUTING.md`](CONTRIBUTING.md)).
+**[boblocale](https://github.com/Karosieben/boblocale)**
+([Crowdin](https://crowdin.com/project/boblocale))
 
-Coordenação e manutenção: **[Or4cu1o](https://github.com/Or4cu1o)**.
-Autoria original do mod: **Slondo**.
+Agradecimentos a **[Or4cu1o](https://github.com/Or4cu1o)** por manter o projeto atualizado.

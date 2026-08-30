@@ -7,8 +7,8 @@ fluxo de contribuição e o glossário, veja [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - Mod **somente locale** para o Factorio: entrega apenas `locale/pt-BR/*.cfg`.
 - Nome interno: `slondo-ptbr`. Alvo atual: Factorio **2.0**.
-- Consolida a tradução pt-BR de ~100+ mods de utilidade/QoL e dos ecossistemas
-  AAI, LTN, Bob's e Space Age, preenchendo o que falta nos pacotes oficiais.
+- Consolida a tradução pt-BR de ~100+ mods
+- Preenche as lacunas existentes nos mods de tradução Mod: [AAI Language Pack](https://mods.factorio.com/mod/AAI_Language_Pack), [LTN Language Pack](https://mods.factorio.com/mod/LTN_Language_Pack) e [Bob's Locale Translations](https://mods.factorio.com/mod/boblocale)
 
 ## 2. Arquitetura de locales
 
