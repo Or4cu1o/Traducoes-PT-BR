@@ -12,13 +12,18 @@ on:
   workflow_dispatch:
     inputs:
       reason:
-        description: "Motivo do disparo manual (ex.: publicar a versão atual)"
+        description: "Motivo do disparo manual"
         required: false
         default: "disparo manual"
       intro:
         description: "Frase de abertura das notas da release (opcional)"
         required: false
         default: ""
+      publish_portal:
+        description: "Enviar ao portal do Factorio neste disparo"
+        type: boolean
+        required: false
+        default: true
 
 permissions:
   contents: write
@@ -41,15 +46,17 @@ jobs:
 
       - name: Detectar bump de versão (bloqueia retrocesso)
         id: ver
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
             V=$(python3 -c "import json; print(json.load(open('info.json'))['version'])")
             echo "changed=true" >> "$GITHUB_OUTPUT"
             echo "version=$V" >> "$GITHUB_OUTPUT"
             echo "::notice::disparo manual — publicando a versão atual ($V)."
           else
-            python3 tools/check_version_bump.py \
-              --old-ref "${{ github.event.before }}" --github-output
+            python3 tools/check_version_bump.py --old-ref "$BEFORE" --github-output
           fi
 
       - name: Sem mudança de versão — encerrar
@@ -75,31 +82,36 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           V: ${{ steps.ver.outputs.version }}
+          # via env, nunca interpolado no script — a entrada pode conter
+          # backticks/aspas e não deve ser interpretada como shell.
+          INTRO: ${{ github.event.inputs.intro }}
         run: |
           set -euo pipefail
           if gh release view "V$V" >/dev/null 2>&1; then
             echo "::warning::release V$V já existe; pulando criação."
             exit 0
           fi
-          INTRO="${{ github.event.inputs.intro }}"
-          if [ -n "$INTRO" ]; then
+          if [ -n "${INTRO:-}" ]; then
             python3 tools/release_notes.py "$V" --intro "$INTRO" > /tmp/notes.md
           else
             python3 tools/release_notes.py "$V" > /tmp/notes.md \
-              || echo "Lançamento da \`V$V\`." > /tmp/notes.md
+              || printf 'Lançamento da `V%s`.\n' "$V" > /tmp/notes.md
           fi
           gh release create "V$V" "dist/slondo-ptbr_${V}.zip" \
             --title "V$V" --notes-file /tmp/notes.md
 
       - name: Portal do Factorio
-        if: steps.ver.outputs.changed == 'true'
+        if: >-
+          steps.ver.outputs.changed == 'true' &&
+          (github.event_name != 'workflow_dispatch' ||
+           github.event.inputs.publish_portal == 'true')
         env:
-          FACTORIO_PORTAL_API_KEY: ${{ secrets.FACTORIO_PORTAL_API_KEY }}
+          FACTORIO_PORTAL_API_KEY: ${{ secrets.FACTORIO_TOKEN }}
           FACTORIO_PORTAL_INIT_URL: ${{ vars.FACTORIO_PORTAL_INIT_URL }}
           V: ${{ steps.ver.outputs.version }}
         run: |
           if [ -z "${FACTORIO_PORTAL_API_KEY:-}" ]; then
-            echo "::warning::FACTORIO_PORTAL_API_KEY não configurado; upload ao portal pulado."
+            echo "::warning::secret FACTORIO_TOKEN vazio; upload ao portal pulado."
             exit 0
           fi
           python3 tools/portal_upload.py --zip "dist/slondo-ptbr_${V}.zip"

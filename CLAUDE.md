@@ -100,7 +100,7 @@ Ficam na raiz do _workspace_, um nível acima, e **não entram no PR**:
 | `check_version_bump.py --old-ref <sha>` | compara `info.json.version` entre revisões; erro se retroceder, `changed=`/`version=` em `$GITHUB_OUTPUT` |
 | `changelog_extract.py X.Y.Z` | primitiva: imprime o corpo cru do bloco `Version: X.Y.Z` do changelog |
 | `release_notes.py X.Y.Z` | formata esse bloco como Markdown (cabeçalhos `# 🆕/📝/🌐/🏷️`, listas) para as notas da GitHub Release |
-| `portal_upload.py --zip <z>` | publica o `.zip` no portal (Mod Upload API v2); usa `FACTORIO_PORTAL_API_KEY` |
+| `portal_upload.py --zip <z>` | publica o `.zip` no portal (`init_upload` → `upload`, Mod Upload API v2); pula se a versão já está publicada; lê `FACTORIO_PORTAL_API_KEY` (no CI vem de `secrets.FACTORIO_TOKEN`) |
 
 `tools/` e `.github/` ficam no repositório, mas `build_release.py` os
 **exclui** do `.zip` publicado no portal.
@@ -135,9 +135,10 @@ Para cada `.cfg`:
 
 Automação: um push em `main` que **suba** `info.json.version` dispara
 `.github/workflows/release.yml` → valida, empacota, cria o GitHub Release
-`VX.Y.Z` (notas por `release_notes.py`) e envia ao portal (`portal_upload.py`, se `FACTORIO_PORTAL_API_KEY`
-estiver configurado). Retrocesso de versão falha o workflow
-(`check_version_bump.py`).
+`VX.Y.Z` (notas por `release_notes.py`) e envia ao portal (`portal_upload.py`,
+com o secret `FACTORIO_TOKEN`). Retrocesso de versão falha o workflow
+(`check_version_bump.py`). Disparo manual (`workflow_dispatch`) aceita `intro`
+e `publish_portal` (marque `false` para só recriar o GitHub Release).
 
 ## 9. Método de duplo lançamento 2.0 / 2.1
 
