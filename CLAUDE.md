@@ -93,7 +93,7 @@ Ficam na raiz do _workspace_, um nível acima, e **não entram no PR**:
 |---|---|
 | `validate_locale.py <dir>` | valida INI, marcadores, LF/BOM, cobertura vs template `en`, não-sobreposição com oficiais, aderência ao glossário |
 | `build_glossary.py` | lê a tabela de `CONTRIBUTING.md` §5 e gera `tools/glossary.json` |
-| `gen_mods_table.py` | regenera a tabela de mods do `README.md` a partir de `mods.csv` |
+| `gen_mods_table.py` | regenera a tabela de mods do `MODS.md` a partir de `mods.csv` (`--check` no CI) |
 | `check_changelog.py` | valida o formato de `changelog.txt` (separador de 99 `-`, `Version:`, `Date: DD/MM/AAAA`, categorias, indentação) |
 | `build_release.py --target 2.0\|2.1` | carimba `info.json.factorio_version` e empacota em `dist/` |
 
@@ -120,11 +120,13 @@ Para cada `.cfg`:
    categorias canônicas em inglês (`Features`, `Minor Features`, `Changes`,
    `Bugfixes`, `Locale`, `Info`), corpo em português.
 2. Atualizar `info.json` (`version`, `dependencies`), `mods.csv` e a tabela do
-   `README.md` (`gen_mods_table.py`).
-3. `python3 tools/validate_locale.py locale/pt-BR`
-4. `python3 -m json.tool info.json`
-5. `python3 tools/check_changelog.py changelog.txt`
-6. `python3 tools/build_release.py --target 2.0` → `dist/slondo-ptbr_X.Y.Z.zip`
+   `MODS.md` (`gen_mods_table.py`); o badge/contagem de mods do `README.md`.
+3. `python3 tools/validate_locale.py --strict locale/pt-BR`
+4. `python3 tools/validate_locale.py --standalone --source-mods ../_source_mods locale/pt-BR`
+5. `python3 -m json.tool info.json`
+6. `python3 tools/check_changelog.py changelog.txt`
+7. `python3 tools/gen_mods_table.py --check`
+8. `python3 tools/build_release.py --target 2.0` → `dist/slondo-ptbr_X.Y.Z.zip`
 
 ## 9. Método de duplo lançamento 2.0 / 2.1
 
