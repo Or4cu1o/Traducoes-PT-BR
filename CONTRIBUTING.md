@@ -309,7 +309,7 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Enabled | Ativado | |
 | Disabled | Desativado | |
 | Blueprint | Blueprint | Manter termo original |
-| Blueprint Book | Livro de Blueprints | Manter termo original |
+| Blueprint Book | Livro de Blueprints | Manter termo Blueprint original |
 | Deconstruction Planner | Planejador de demolição | |
 | Upgrade Planner | Planejador de melhoria | |
 | Tooltip | Dica | |
@@ -324,3 +324,4 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 - Nomes de mods e de autores.
 - Chaves (o lado esquerdo do `=`).
 - Marcas e nomes próprios em geral.
+- Termos conhecidos e que não são traduzidos na base do jogo.
