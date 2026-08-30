@@ -8,6 +8,7 @@
   "dependencies": [
     "base >= 2.0",
     "? space-age",
+    "? aai-containers",
     "? aai-industry",
     "? aai-loaders",
     "? aai-programmable-structures",
@@ -22,6 +23,7 @@
     "? aai-vehicles-laser-tank",
     "? aai-vehicles-miner",
     "? aai-vehicles-warden",
+    "? aai-zones",
     "? Accumulator-V2",
     "? advanced-atomic-science",
     "? agricultural-roboport",
