@@ -5,6 +5,8 @@ Verificações sempre ativas (falham o build):
   - sem BOM, sem CR, sem espaço à direita, arquivo termina em \\n
   - estrutura INI válida (seção / chave=valor / comentário / vazio)
   - sem chave duplicada dentro da mesma seção
+  - sem cabeçalho de seção repetido no mesmo arquivo (erro "Duplicate key" do
+    Factorio)
   - integridade de marcadores: __1__, __ENTITY__x__, __ITEM__x__,
     __CONTROL__x__, __ALT_CONTROL__n__x__, __plural_for_parameter__...__,
     sem espaço interno; sem "\\ n" no lugar de "\\n"
@@ -132,6 +134,7 @@ def parse_cfg(path: str, rep: Report) -> dict:
         return {}
     section = None
     seen: set[tuple[str, str]] = set()
+    sections_seen: set[str] = set()
     out: dict[tuple[str, str], str] = {}
     for i, raw in enumerate(text.split("\n"), 1):
         line = raw
@@ -144,6 +147,12 @@ def parse_cfg(path: str, rep: Report) -> dict:
         m = SECTION_RE.match(s)
         if m:
             section = m.group(1).strip()
+            # O Factorio funde seções entre ARQUIVOS, mas um cabeçalho
+            # repetido DENTRO do mesmo arquivo é "Duplicate key ... at ROOT".
+            if section in sections_seen:
+                rep.err(name, f"linha {i}: seção repetida [{section}] "
+                              f"(funda as chaves numa única ocorrência)")
+            sections_seen.add(section)
             continue
         if "=" not in line:
             rep.err(name, f"linha {i}: linha sem '=' e sem cabeçalho de seção")
