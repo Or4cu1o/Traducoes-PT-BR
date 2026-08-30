@@ -11,9 +11,10 @@ Date: 28/08/2026
     - Lista de dependências opcionais do info.json reconstruída a partir de mods.csv, em ordem alfabética e sem depender de pacotes de idioma de terceiros.
     - Terminologia unificada ao glossário do jogo base em pt-BR (Insersor, Esteira de transporte, Máquina de montagem, Transmissor, Perfuratriz, Baú, entre outros).
   Locale:
-    - +133 mods adicionados ao pacote (total: 232). Destaques: ecossistema AAI completo, Bob's Mods, Krastorio 2, Space Exploration, Angel's Refining e Petrochem, Yuoki Industries, Cerys, Maraxsis, Muluna, Castra, Tenebris e dezenas de utilitários e melhorias de qualidade de vida.
+    - +134 mods adicionados ao pacote (total: 233). Destaques: ecossistema AAI completo, Bob's Mods, Krastorio 2, Space Exploration, Angel's Refining e Petrochem, Yuoki Industries, Cerys, Maraxsis, Muluna, Castra, Tenebris, Helmod e dezenas de utilitários e melhorias de qualidade de vida.
     - Absorvidas e sanitizadas as traduções do pacote YKR (Era Espacial e planetas adicionais), com correção de marcadores de interpolação, acentuação e capitalização.
     - Cobertura de lacunas de pt-BR dos ecossistemas AAI e LTN; onde há sobreposição com os pacotes nativos, o texto é cópia fiel da versão atual deles (mesma origem no Crowdin). 372 chaves ingeridas verbatim dos pacotes AAI/LTN Language Pack por tools/ingest_sources.py.
+    - Pipeline IA multiagente (Gemini via agy + revisão Claude Sonnet 5) — Tier A do modelo autônomo: 210 chaves novas em planet-muluna (88), Helmod (arquivo novo, 121) e Krastorio 2 Spaced Out (1), revisadas contra o glossário, os marcadores de interpolação e os precedentes do repositório.
     - Saneamento dos arquivos .cfg existentes: quebra de linha final, remoção de espaços à direita, ausência de BOM e de CRLF.
   Info:
     - README.md enxugado (thumbnail centralizada, badges de versão/downloads/CI, bloco de status); a tabela completa de mods passou para MODS.md, gerada de mods.csv por tools/gen_mods_table.py e incluída no pacote publicado.

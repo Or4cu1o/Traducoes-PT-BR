@@ -121,130 +121,131 @@ A tabela é gerada de [`mods.csv`](mods.csv) por `tools/gen_mods_table.py` —
 | 106 | HD Plasma Duct | Powerscooter & Keysivi | 1.1.8 | V1.0.4 | 11/01/2026 |
 | 107 | Heat Inserter | Kryzeth | 1.2.6 | V1.0.2 | 15/11/2025 |
 | 108 | Heat-resistant Pipes | NOiZE | 2.0.7 | V1.0.3 | 07/12/2025 |
-| 109 | Hovercrafts | Arcani_Victus | 2.0.4 | V1.1.0 | 28/08/2026 |
-| 110 | Infinite Quality Tiers | notnotmelon | 1.0.5 | V1.1.0 | 28/08/2026 |
-| 111 | Inserter Fuel Leech | Oktokolo | 1.0.4 | V1.1.0 | 28/08/2026 |
-| 112 | Item Network SA | djmalk | 1.0.3 | V1.1.0 | 28/08/2026 |
-| 113 | Jetpack | Earendel | 0.4.17 | V1.1.0 | 28/08/2026 |
-| 114 | Krastorio 2 | raiguard | 2.0.19 | V1.1.0 | 28/08/2026 |
-| 115 | Krastorio 2 - Air Purifier | Tarckmhog | 1.2.2 | V1.1.0 | 28/08/2026 |
-| 116 | Krastorio 2 Spaced Out | Polka_37 | 1.6.21 | V1.1.0 | 28/08/2026 |
-| 117 | Larger Lamps 2.0 | Deadlock989, Goakiller900, MasterBuilder & NullHarp | 0.2.3 | V1.0.4 | 11/01/2026 |
-| 118 | Laser Tanks | OwnlyMe | 2.0.12 | V1.1.0 | 28/08/2026 |
-| 119 | Legacy Train Model | aspct | 0.4.3 | V1.0.0 | 11/11/2025 |
-| 120 | Li-Quarry | lost-in | 1.0.1 | V1.1.0 | 28/08/2026 |
-| 121 | Light Overhaul | Earendel | 0.2.2 | V1.1.0 | 28/08/2026 |
-| 122 | Lignumis | cackling.fiend | 2.6.0 | V1.1.0 | 28/08/2026 |
-| 123 | Logistic Technology Beacon 2.0 | cosinusek | 2.0.0 | V1.0.6 | 24/06/2026 |
-| 124 | Logistics Insights | farzag | 1.0.9 | V1.0.2 | 15/11/2025 |
-| 125 | Long range delivery drones (fork) | Talandar99 | 2.1.0 | V1.0.4 | 11/01/2026 |
-| 126 | LTN - Logistic Train Network | Optera | 2.9.0 | V1.1.0 | 28/08/2026 |
-| 127 | LTN - Space Exploration Integration | hgschmie | 1.0.1 | V1.1.0 | 28/08/2026 |
-| 128 | LTN Combinator Modernized | kryojenik | 2.2.7 | V1.1.0 | 28/08/2026 |
-| 129 | LTN Manager | nihilistzsche | 0.5.3 | V1.1.0 | 28/08/2026 |
-| 130 | Lubrication Tower | Talandar99 | 0.1.5 | V1.0.5 | 12/02/2026 |
-| 131 | Lunar Panel | KilangCuka | 1.1.7 | V1.0.0 | 11/11/2025 |
-| 132 | Magical Quarries | Yoshirakou | 1.0.7 | V1.1.0 | 28/08/2026 |
-| 133 | Manufacturer | Velaanix | 1.3.0 | V1.0.3 | 07/12/2025 |
-| 134 | Materials Easy | NikodusLP | 1.2.1 | V1.1.0 | 28/08/2026 |
-| 135 | Max Rate Calculator | Theanderblast | 200.0.53 | V1.1.0 | 28/08/2026 |
-| 136 | Mega Bot Start | ZeroSerenity | 2.1.1 | V1.1.0 | 28/08/2026 |
-| 137 | Metal and Stars | 5forsilver | 0.1.20 | V1.1.0 | 28/08/2026 |
-| 138 | Milestones | Wiwiweb | 1.4.7 | V1.1.0 | 28/08/2026 |
-| 139 | Mini Trains | Klonan & Sacredanarchy | 2.0.0 | V1.0.2 | 15/11/2025 |
-| 140 | Mini Trains Lead the Way | Indzasa | 1.2.4 | V1.0.2 | 15/11/2025 |
-| 141 | Minimal Electric Rails | snouz | 2.0.5 | V1.0.0 | 11/11/2025 |
-| 142 | Mining Drones | Klonan | 2.1.0 | V1.1.0 | 28/08/2026 |
-| 143 | Missile Defense Systems [SA] | kafoaai | 1.1.4 | V1.0.3 | 07/12/2025 |
-| 144 | Modify Silo Max Weight | Ikamusme | 2.0.1 | V1.1.0 | 28/08/2026 |
-| 145 | Molten plastic | Powerscooter | 1.0.26 | V1.0.4 | 11/01/2026 |
-| 146 | More Roboports | b4Bu | 2.0.3 | V1.1.0 | 28/08/2026 |
-| 147 | Multiplayer UI | bykoow | 0.2.3 | V1.1.0 | 28/08/2026 |
-| 148 | Multiple Characters | mathegenie03 | 0.5.0 | V1.1.0 | 28/08/2026 |
-| 149 | Muluna graphics | MeteorSwarm | 1.1.6 | V1.1.0 | 28/08/2026 |
-| 150 | Muluna Utility Constants | MeteorSwarm | 1.0.2 | V1.1.0 | 28/08/2026 |
-| 151 | Muluna, Moon of Nauvis | MeteorSwarm | 2.7.13 | V1.1.0 | 28/08/2026 |
-| 152 | No Solid Fuel Vehicles | valertron | 0.2.1 | V1.0.6 | 24/06/2026 |
-| 153 | Oarc Multiplayer Spawn | Oarc | 2.1.24 | V1.1.0 | 28/08/2026 |
-| 154 | Ore Eraser | tergiver | 2.0.0 | V1.1.0 | 28/08/2026 |
-| 155 | Ore-ganizer | 0n0w1c | 0.14.0 | V1.0.0 | 11/11/2025 |
-| 156 | Parallel Research | Tename | 0.7.4 | V1.0.3 | 07/12/2025 |
-| 157 | Pipe Visualizer 2.0 | Ashier | 2.4.4 | V1.1.0 | 28/08/2026 |
-| 158 | Planet Akularis | rjdunlap | 0.1.1 | V1.0.5 | 12/02/2026 |
-| 159 | Planet Belt Portal | agaede22 | 5.0.1 | V1.0.2 | 15/11/2025 |
-| 160 | Planet Castra | Bartz24 | 0.5.4 | V1.1.0 | 28/08/2026 |
-| 161 | Planet Foliax | Crethor | 1.0.30 | V1.0.5 | 12/02/2026 |
-| 162 | Planet Hexalith | rjdunlap | 0.1.3 | V1.0.5 | 12/02/2026 |
-| 163 | Planet Maraxsis | notnotmelon | 1.31.2 | V1.0.5 | 12/02/2026 |
-| 164 | Planet Omnia | Wwombatt | 1.0.5 | V1.1.0 | 28/08/2026 |
-| 165 | Planet Pelagos | Talandar99 | 0.43.1 | V1.0.4 | 11/01/2026 |
-| 166 | Planet Vesta | CPU_BlackHeart | 2.1.9 | V1.0.0 | 11/11/2025 |
-| 167 | PlanetsLib | thesixthroc | 1.16.3 | V1.0.4 | 11/01/2026 |
-| 168 | Plasma Accelerator | ArkadiPorovozov | 0.0.312 | V1.0.0 | 11/11/2025 |
-| 169 | Plasma Handling | Powerscooter | 1.0.2 | V1.0.4 | 11/01/2026 |
-| 170 | Plasma Industries | Powerscooter | 1.0.21 | V1.0.4 | 11/01/2026 |
-| 171 | Plutonium Energy | JohnTheCoolingFan | 1.8.1 | V1.1.0 | 28/08/2026 |
-| 172 | Pneumatic Mining Drill | Wolbobus | 0.9.0 | V1.0.5 | 12/02/2026 |
-| 173 | Pollution as surface property | cackling.fiend | 2.0.0 | V1.1.0 | 28/08/2026 |
-| 174 | Posted Signals | O5MO | 1.0.3 | V1.0.6 | 24/06/2026 |
-| 175 | Promethium Belts | Helios467 | 1.0.2 | V1.0.4 | 11/01/2026 |
-| 176 | Quality condenser | Quezler | 2.0.4 | V1.1.0 | 28/08/2026 |
-| 177 | Quantum emitter | Azertyyu | 0.2.5 | V1.0.4 | 11/01/2026 |
-| 178 | Quantum Lab | Azertyyu | 0.1.14 | V1.0.4 | 11/01/2026 |
-| 179 | Rate Calculator | raiguard | 3.3.8 | V1.1.0 | 28/08/2026 |
-| 180 | Reach Equipment | BetweenWalls | 1.0.3 | V1.0.0 | 11/11/2025 |
-| 181 | Repair Turret 2 | tiko13 | 1.1.9 | V1.0.6 | 24/06/2026 |
-| 182 | Resource Spawner Overhaul | orzelek | 7.0.26 | V1.1.0 | 28/08/2026 |
-| 183 | Robocharger Factorio 2.0 | Smurph & briel1235 | 0.0.1 | V1.0.4 | 11/01/2026 |
-| 184 | Roboport Range Multiplier | Jobus | 1.2.1 | V1.1.0 | 28/08/2026 |
-| 185 | Rocket silos can buffer more rockets | Quezler & username9999 | 1.1.0 | V1.0.6 | 24/06/2026 |
-| 186 | RPG Items | OwnlyMe | 0.18.9 | V1.1.0 | 28/08/2026 |
-| 187 | RPG System | MFerrari | 2.0.8 | V1.1.0 | 28/08/2026 |
-| 188 | Schall Transport Group | Schallfalke | 2.0.2 | V1.1.0 | 28/08/2026 |
-| 189 | Science Pack Drops | Khalcifer | 3.0.2 | V1.1.0 | 28/08/2026 |
-| 190 | Scrap Toolkit | SafTheLamb & S6X | 1.1.0 | V1.0.5 | 12/02/2026 |
-| 191 | Scrappy Chemistry | SafTheLamb | 0.5.6 | V1.0.4 | 11/01/2026 |
-| 192 | Scrappy Industry | SafTheLamb | 1.1.3 | V1.0.3 | 07/12/2025 |
-| 193 | Shortcuts | ickputzdirwech | 2.0.7 | V1.1.0 | 28/08/2026 |
-| 194 | Solar Matrix | Sacredanarchy | 1.0.8 | V1.1.0 | 28/08/2026 |
-| 195 | Space Exploration | Earendel | 0.7.57 | V1.1.0 | 28/08/2026 |
-| 196 | Space Exploration LTN integration | harag | 0.7.1 | V1.1.0 | 28/08/2026 |
-| 197 | Space Exploration Menu Simulations | Earendel | 0.7.4 | V1.1.0 | 28/08/2026 |
-| 198 | Space Exploration Postprocess (Required) | Earendel | 0.7.5 | V1.1.0 | 28/08/2026 |
-| 199 | Spidertron Enhancements | Xorimuth | 1.10.8 | V1.0.5 | 12/02/2026 |
-| 200 | Spidertron Patrols | Xorimuth | 2.6.3 | V1.0.5 | 12/02/2026 |
-| 201 | Squeak Through 2 | _CodeGreen | 0.1.5 | V1.1.0 | 28/08/2026 |
-| 202 | StarMap Background | Tserup | 2.2.0 | V1.0.0 | 11/11/2025 |
-| 203 | Sushi Splitters | TeXiCiTy | 0.1.7 | V1.0.2 | 15/11/2025 |
-| 204 | Telogistics | S6X | 1.2.0 | V1.1.0 | 28/08/2026 |
-| 205 | Tenebris | Big_J | 0.2.1 | V1.1.0 | 28/08/2026 |
-| 206 | Tenebris Prime | MeteorSwarm | 1.3.10 | V1.1.0 | 28/08/2026 |
-| 207 | Text Plates | Earendel & gheift | 0.7.2 | V1.0.0 | 11/11/2025 |
-| 208 | Tier 4 Modules | Porkchop13 | 2.2.1 | V1.1.0 | 28/08/2026 |
-| 209 | Tile Upgrade Planner (Muluna Fork) | MeteorSwarm | 1.0.6 | V1.1.0 | 28/08/2026 |
-| 210 | TinyStart 2 | et508 | 1.2.4 | V1.1.0 | 28/08/2026 |
-| 211 | Todo List | JasonMiles | 19.15.2 | V1.1.0 | 28/08/2026 |
-| 212 | Transport Drones | meglinge | 1.0.26 | V1.1.0 | 28/08/2026 |
-| 213 | Tungsten | cackling.fiend & Brevven | 2.0.4 | V1.0.2 | 15/11/2025 |
-| 214 | Ultimate Research Queue (1.1 ONLY) | raiguard | 1.1.0 | V1.1.0 | 28/08/2026 |
-| 215 | Unlimited Productivity and Quality 2.0 Compat Fork | mcmodderHD | 2.1.0 | V1.1.0 | 28/08/2026 |
-| 216 | Updated Construction Drones | Tubbles | 2.0.4 | V1.1.0 | 28/08/2026 |
-| 217 | Valves | Stringweasel | 2.2.0 | V1.1.0 | 28/08/2026 |
-| 218 | Valves Library | Stringweasel | 1.0.0 | V1.1.0 | 28/08/2026 |
-| 219 | Various Cargo Bays | Powerscooter | 1.0.2 | V1.0.4 | 11/01/2026 |
-| 220 | Visible Planets in Space | Nauviax | 1.7.2 | V1.1.0 | 28/08/2026 |
-| 221 | Voidcraft | S6X | 2.7.3 | V1.0.3 | 07/12/2025 |
-| 222 | Waterfill (Ritn) | Ritn | 1.5.5 | V1.1.0 | 28/08/2026 |
-| 223 | Waterfill (v17) | untraceablesmurf | 2.0.5 | V1.1.0 | 28/08/2026 |
-| 224 | Winter Is Coming | valertron | 0.3.1 | V1.0.6 | 24/06/2026 |
-| 225 | Wire Lamps | peterwolf.pl | 0.1.6 | V1.0.5 | 12/02/2026 |
-| 226 | Wood Walls and floors | zanven | 1.4.1 | V1.1.0 | 28/08/2026 |
-| 227 | Wooden Gleba: Water Cane | cackling.fiend | 2.0.0 | V1.1.0 | 28/08/2026 |
-| 228 | Wooden Industry | SafTheLamb | 2.1.8 | V1.0.4 | 11/01/2026 |
-| 229 | Wooden Logistics | SafTheLamb | 2.5.5 | V1.0.3 | 07/12/2025 |
-| 230 | Wooden Moshine: Solaponics | SafTheLamb | 0.2.3 | V1.0.6 | 24/06/2026 |
-| 231 | Wooden Platform | Talandar99 | 0.1.2 | V1.0.5 | 12/02/2026 |
-| 232 | Yuoki Industries | YuokiTani | 1.2.23 | V1.1.0 | 28/08/2026 |
+| 109 | Helmod | Helfima | 2.2.14 | V1.1.0 | 28/08/2026 |
+| 110 | Hovercrafts | Arcani_Victus | 2.0.4 | V1.1.0 | 28/08/2026 |
+| 111 | Infinite Quality Tiers | notnotmelon | 1.0.5 | V1.1.0 | 28/08/2026 |
+| 112 | Inserter Fuel Leech | Oktokolo | 1.0.4 | V1.1.0 | 28/08/2026 |
+| 113 | Item Network SA | djmalk | 1.0.3 | V1.1.0 | 28/08/2026 |
+| 114 | Jetpack | Earendel | 0.4.17 | V1.1.0 | 28/08/2026 |
+| 115 | Krastorio 2 | raiguard | 2.0.19 | V1.1.0 | 28/08/2026 |
+| 116 | Krastorio 2 - Air Purifier | Tarckmhog | 1.2.2 | V1.1.0 | 28/08/2026 |
+| 117 | Krastorio 2 Spaced Out | Polka_37 | 1.6.21 | V1.1.0 | 28/08/2026 |
+| 118 | Larger Lamps 2.0 | Deadlock989, Goakiller900, MasterBuilder & NullHarp | 0.2.3 | V1.0.4 | 11/01/2026 |
+| 119 | Laser Tanks | OwnlyMe | 2.0.12 | V1.1.0 | 28/08/2026 |
+| 120 | Legacy Train Model | aspct | 0.4.3 | V1.0.0 | 11/11/2025 |
+| 121 | Li-Quarry | lost-in | 1.0.1 | V1.1.0 | 28/08/2026 |
+| 122 | Light Overhaul | Earendel | 0.2.2 | V1.1.0 | 28/08/2026 |
+| 123 | Lignumis | cackling.fiend | 2.6.0 | V1.1.0 | 28/08/2026 |
+| 124 | Logistic Technology Beacon 2.0 | cosinusek | 2.0.0 | V1.0.6 | 24/06/2026 |
+| 125 | Logistics Insights | farzag | 1.0.9 | V1.0.2 | 15/11/2025 |
+| 126 | Long range delivery drones (fork) | Talandar99 | 2.1.0 | V1.0.4 | 11/01/2026 |
+| 127 | LTN - Logistic Train Network | Optera | 2.9.0 | V1.1.0 | 28/08/2026 |
+| 128 | LTN - Space Exploration Integration | hgschmie | 1.0.1 | V1.1.0 | 28/08/2026 |
+| 129 | LTN Combinator Modernized | kryojenik | 2.2.7 | V1.1.0 | 28/08/2026 |
+| 130 | LTN Manager | nihilistzsche | 0.5.3 | V1.1.0 | 28/08/2026 |
+| 131 | Lubrication Tower | Talandar99 | 0.1.5 | V1.0.5 | 12/02/2026 |
+| 132 | Lunar Panel | KilangCuka | 1.1.7 | V1.0.0 | 11/11/2025 |
+| 133 | Magical Quarries | Yoshirakou | 1.0.7 | V1.1.0 | 28/08/2026 |
+| 134 | Manufacturer | Velaanix | 1.3.0 | V1.0.3 | 07/12/2025 |
+| 135 | Materials Easy | NikodusLP | 1.2.1 | V1.1.0 | 28/08/2026 |
+| 136 | Max Rate Calculator | Theanderblast | 200.0.53 | V1.1.0 | 28/08/2026 |
+| 137 | Mega Bot Start | ZeroSerenity | 2.1.1 | V1.1.0 | 28/08/2026 |
+| 138 | Metal and Stars | 5forsilver | 0.1.20 | V1.1.0 | 28/08/2026 |
+| 139 | Milestones | Wiwiweb | 1.4.7 | V1.1.0 | 28/08/2026 |
+| 140 | Mini Trains | Klonan & Sacredanarchy | 2.0.0 | V1.0.2 | 15/11/2025 |
+| 141 | Mini Trains Lead the Way | Indzasa | 1.2.4 | V1.0.2 | 15/11/2025 |
+| 142 | Minimal Electric Rails | snouz | 2.0.5 | V1.0.0 | 11/11/2025 |
+| 143 | Mining Drones | Klonan | 2.1.0 | V1.1.0 | 28/08/2026 |
+| 144 | Missile Defense Systems [SA] | kafoaai | 1.1.4 | V1.0.3 | 07/12/2025 |
+| 145 | Modify Silo Max Weight | Ikamusme | 2.0.1 | V1.1.0 | 28/08/2026 |
+| 146 | Molten plastic | Powerscooter | 1.0.26 | V1.0.4 | 11/01/2026 |
+| 147 | More Roboports | b4Bu | 2.0.3 | V1.1.0 | 28/08/2026 |
+| 148 | Multiplayer UI | bykoow | 0.2.3 | V1.1.0 | 28/08/2026 |
+| 149 | Multiple Characters | mathegenie03 | 0.5.0 | V1.1.0 | 28/08/2026 |
+| 150 | Muluna graphics | MeteorSwarm | 1.1.6 | V1.1.0 | 28/08/2026 |
+| 151 | Muluna Utility Constants | MeteorSwarm | 1.0.2 | V1.1.0 | 28/08/2026 |
+| 152 | Muluna, Moon of Nauvis | MeteorSwarm | 2.7.13 | V1.1.0 | 28/08/2026 |
+| 153 | No Solid Fuel Vehicles | valertron | 0.2.1 | V1.0.6 | 24/06/2026 |
+| 154 | Oarc Multiplayer Spawn | Oarc | 2.1.24 | V1.1.0 | 28/08/2026 |
+| 155 | Ore Eraser | tergiver | 2.0.0 | V1.1.0 | 28/08/2026 |
+| 156 | Ore-ganizer | 0n0w1c | 0.14.0 | V1.0.0 | 11/11/2025 |
+| 157 | Parallel Research | Tename | 0.7.4 | V1.0.3 | 07/12/2025 |
+| 158 | Pipe Visualizer 2.0 | Ashier | 2.4.4 | V1.1.0 | 28/08/2026 |
+| 159 | Planet Akularis | rjdunlap | 0.1.1 | V1.0.5 | 12/02/2026 |
+| 160 | Planet Belt Portal | agaede22 | 5.0.1 | V1.0.2 | 15/11/2025 |
+| 161 | Planet Castra | Bartz24 | 0.5.4 | V1.1.0 | 28/08/2026 |
+| 162 | Planet Foliax | Crethor | 1.0.30 | V1.0.5 | 12/02/2026 |
+| 163 | Planet Hexalith | rjdunlap | 0.1.3 | V1.0.5 | 12/02/2026 |
+| 164 | Planet Maraxsis | notnotmelon | 1.31.2 | V1.0.5 | 12/02/2026 |
+| 165 | Planet Omnia | Wwombatt | 1.0.5 | V1.1.0 | 28/08/2026 |
+| 166 | Planet Pelagos | Talandar99 | 0.43.1 | V1.0.4 | 11/01/2026 |
+| 167 | Planet Vesta | CPU_BlackHeart | 2.1.9 | V1.0.0 | 11/11/2025 |
+| 168 | PlanetsLib | thesixthroc | 1.16.3 | V1.0.4 | 11/01/2026 |
+| 169 | Plasma Accelerator | ArkadiPorovozov | 0.0.312 | V1.0.0 | 11/11/2025 |
+| 170 | Plasma Handling | Powerscooter | 1.0.2 | V1.0.4 | 11/01/2026 |
+| 171 | Plasma Industries | Powerscooter | 1.0.21 | V1.0.4 | 11/01/2026 |
+| 172 | Plutonium Energy | JohnTheCoolingFan | 1.8.1 | V1.1.0 | 28/08/2026 |
+| 173 | Pneumatic Mining Drill | Wolbobus | 0.9.0 | V1.0.5 | 12/02/2026 |
+| 174 | Pollution as surface property | cackling.fiend | 2.0.0 | V1.1.0 | 28/08/2026 |
+| 175 | Posted Signals | O5MO | 1.0.3 | V1.0.6 | 24/06/2026 |
+| 176 | Promethium Belts | Helios467 | 1.0.2 | V1.0.4 | 11/01/2026 |
+| 177 | Quality condenser | Quezler | 2.0.4 | V1.1.0 | 28/08/2026 |
+| 178 | Quantum emitter | Azertyyu | 0.2.5 | V1.0.4 | 11/01/2026 |
+| 179 | Quantum Lab | Azertyyu | 0.1.14 | V1.0.4 | 11/01/2026 |
+| 180 | Rate Calculator | raiguard | 3.3.8 | V1.1.0 | 28/08/2026 |
+| 181 | Reach Equipment | BetweenWalls | 1.0.3 | V1.0.0 | 11/11/2025 |
+| 182 | Repair Turret 2 | tiko13 | 1.1.9 | V1.0.6 | 24/06/2026 |
+| 183 | Resource Spawner Overhaul | orzelek | 7.0.26 | V1.1.0 | 28/08/2026 |
+| 184 | Robocharger Factorio 2.0 | Smurph & briel1235 | 0.0.1 | V1.0.4 | 11/01/2026 |
+| 185 | Roboport Range Multiplier | Jobus | 1.2.1 | V1.1.0 | 28/08/2026 |
+| 186 | Rocket silos can buffer more rockets | Quezler & username9999 | 1.1.0 | V1.0.6 | 24/06/2026 |
+| 187 | RPG Items | OwnlyMe | 0.18.9 | V1.1.0 | 28/08/2026 |
+| 188 | RPG System | MFerrari | 2.0.8 | V1.1.0 | 28/08/2026 |
+| 189 | Schall Transport Group | Schallfalke | 2.0.2 | V1.1.0 | 28/08/2026 |
+| 190 | Science Pack Drops | Khalcifer | 3.0.2 | V1.1.0 | 28/08/2026 |
+| 191 | Scrap Toolkit | SafTheLamb & S6X | 1.1.0 | V1.0.5 | 12/02/2026 |
+| 192 | Scrappy Chemistry | SafTheLamb | 0.5.6 | V1.0.4 | 11/01/2026 |
+| 193 | Scrappy Industry | SafTheLamb | 1.1.3 | V1.0.3 | 07/12/2025 |
+| 194 | Shortcuts | ickputzdirwech | 2.0.7 | V1.1.0 | 28/08/2026 |
+| 195 | Solar Matrix | Sacredanarchy | 1.0.8 | V1.1.0 | 28/08/2026 |
+| 196 | Space Exploration | Earendel | 0.7.57 | V1.1.0 | 28/08/2026 |
+| 197 | Space Exploration LTN integration | harag | 0.7.1 | V1.1.0 | 28/08/2026 |
+| 198 | Space Exploration Menu Simulations | Earendel | 0.7.4 | V1.1.0 | 28/08/2026 |
+| 199 | Space Exploration Postprocess (Required) | Earendel | 0.7.5 | V1.1.0 | 28/08/2026 |
+| 200 | Spidertron Enhancements | Xorimuth | 1.10.8 | V1.0.5 | 12/02/2026 |
+| 201 | Spidertron Patrols | Xorimuth | 2.6.3 | V1.0.5 | 12/02/2026 |
+| 202 | Squeak Through 2 | _CodeGreen | 0.1.5 | V1.1.0 | 28/08/2026 |
+| 203 | StarMap Background | Tserup | 2.2.0 | V1.0.0 | 11/11/2025 |
+| 204 | Sushi Splitters | TeXiCiTy | 0.1.7 | V1.0.2 | 15/11/2025 |
+| 205 | Telogistics | S6X | 1.2.0 | V1.1.0 | 28/08/2026 |
+| 206 | Tenebris | Big_J | 0.2.1 | V1.1.0 | 28/08/2026 |
+| 207 | Tenebris Prime | MeteorSwarm | 1.3.10 | V1.1.0 | 28/08/2026 |
+| 208 | Text Plates | Earendel & gheift | 0.7.2 | V1.0.0 | 11/11/2025 |
+| 209 | Tier 4 Modules | Porkchop13 | 2.2.1 | V1.1.0 | 28/08/2026 |
+| 210 | Tile Upgrade Planner (Muluna Fork) | MeteorSwarm | 1.0.6 | V1.1.0 | 28/08/2026 |
+| 211 | TinyStart 2 | et508 | 1.2.4 | V1.1.0 | 28/08/2026 |
+| 212 | Todo List | JasonMiles | 19.15.2 | V1.1.0 | 28/08/2026 |
+| 213 | Transport Drones | meglinge | 1.0.26 | V1.1.0 | 28/08/2026 |
+| 214 | Tungsten | cackling.fiend & Brevven | 2.0.4 | V1.0.2 | 15/11/2025 |
+| 215 | Ultimate Research Queue (1.1 ONLY) | raiguard | 1.1.0 | V1.1.0 | 28/08/2026 |
+| 216 | Unlimited Productivity and Quality 2.0 Compat Fork | mcmodderHD | 2.1.0 | V1.1.0 | 28/08/2026 |
+| 217 | Updated Construction Drones | Tubbles | 2.0.4 | V1.1.0 | 28/08/2026 |
+| 218 | Valves | Stringweasel | 2.2.0 | V1.1.0 | 28/08/2026 |
+| 219 | Valves Library | Stringweasel | 1.0.0 | V1.1.0 | 28/08/2026 |
+| 220 | Various Cargo Bays | Powerscooter | 1.0.2 | V1.0.4 | 11/01/2026 |
+| 221 | Visible Planets in Space | Nauviax | 1.7.2 | V1.1.0 | 28/08/2026 |
+| 222 | Voidcraft | S6X | 2.7.3 | V1.0.3 | 07/12/2025 |
+| 223 | Waterfill (Ritn) | Ritn | 1.5.5 | V1.1.0 | 28/08/2026 |
+| 224 | Waterfill (v17) | untraceablesmurf | 2.0.5 | V1.1.0 | 28/08/2026 |
+| 225 | Winter Is Coming | valertron | 0.3.1 | V1.0.6 | 24/06/2026 |
+| 226 | Wire Lamps | peterwolf.pl | 0.1.6 | V1.0.5 | 12/02/2026 |
+| 227 | Wood Walls and floors | zanven | 1.4.1 | V1.1.0 | 28/08/2026 |
+| 228 | Wooden Gleba: Water Cane | cackling.fiend | 2.0.0 | V1.1.0 | 28/08/2026 |
+| 229 | Wooden Industry | SafTheLamb | 2.1.8 | V1.0.4 | 11/01/2026 |
+| 230 | Wooden Logistics | SafTheLamb | 2.5.5 | V1.0.3 | 07/12/2025 |
+| 231 | Wooden Moshine: Solaponics | SafTheLamb | 0.2.3 | V1.0.6 | 24/06/2026 |
+| 232 | Wooden Platform | Talandar99 | 0.1.2 | V1.0.5 | 12/02/2026 |
+| 233 | Yuoki Industries | YuokiTani | 1.2.23 | V1.1.0 | 28/08/2026 |
 
-_Total: 232 mods. Gerado de `mods.csv` por `tools/gen_mods_table.py`._
+_Total: 233 mods. Gerado de `mods.csv` por `tools/gen_mods_table.py`._
 <!-- MODS-TABLE:END -->
