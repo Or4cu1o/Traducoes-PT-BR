@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.0
+Version: 2.0.0
 Date: 28/08/2026
   Features:
     - Reestruturação do pacote como hub canônico de tradução pt-BR para mods do Factorio.
+    - Versão do pacote saltada para 2.0.0 para marcar o marco de cobertura autônoma integral do ecossistema (242 mods).
     - Alvo do jogo ajustado para a versão 2.0; método de duplo lançamento 2.0/2.1 documentado e roteirizado.
     - Governança de repositório: LICENSE (MIT + concessão de reuso irrestrito das strings de locale/), CONTRIBUTING.md com glossário canônico pt-BR, CODE_OF_CONDUCT.md, CLAUDE.md, .gitattributes e .gitignore.
     - Ferramentas de manutenção em tools/ (validação de locale, glossário, tabela de mods, formato do changelog, empacotamento) e workflow de CI no GitHub.

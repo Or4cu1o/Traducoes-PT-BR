@@ -30,6 +30,9 @@ jobs:
       - name: Tabela de mods (MODS.md) sincronizada
         run: python3 tools/gen_mods_table.py --check
 
+      - name: Sem colisão de chave cross-file nova
+        run: python3 tools/check_collisions.py --check
+
       - name: Empacotamento (dry-run)
         run: python3 tools/build_release.py --target 2.0 --dry-run
 

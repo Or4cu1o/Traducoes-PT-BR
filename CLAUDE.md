@@ -95,6 +95,7 @@ Ficam na raiz do _workspace_, um nível acima, e **não entram no PR**:
 | `build_glossary.py` | lê a tabela de `CONTRIBUTING.md` §5 e gera `tools/glossary.json` |
 | `gen_mods_table.py` | regenera a tabela de mods do `MODS.md` a partir de `mods.csv` (`--check` no CI) |
 | `check_changelog.py` | valida o formato de `changelog.txt` (separador de 99 `-`, `Version:`, `Date: DD/MM/AAAA`, categorias, indentação) |
+| `check_collisions.py` | lista `[secao] chave` definidas em >=2 `.cfg` com textos divergentes; `--check` falha no CI se surgir uma fora de `tools/collisions-baseline.txt` |
 | `build_release.py --target 2.0\|2.1` | carimba `info.json.factorio_version` e empacota em `dist/` |
 
 `tools/` e `.github/` ficam no repositório, mas `build_release.py` os
