@@ -15,6 +15,10 @@ on:
         description: "Motivo do disparo manual (ex.: publicar a versão atual)"
         required: false
         default: "disparo manual"
+      intro:
+        description: "Frase de abertura das notas da release (opcional)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -77,8 +81,13 @@ jobs:
             echo "::warning::release V$V já existe; pulando criação."
             exit 0
           fi
-          python3 tools/release_notes.py "$V" > /tmp/notes.md \
-            || echo "Lançamento da \`V$V\`." > /tmp/notes.md
+          INTRO="${{ github.event.inputs.intro }}"
+          if [ -n "$INTRO" ]; then
+            python3 tools/release_notes.py "$V" --intro "$INTRO" > /tmp/notes.md
+          else
+            python3 tools/release_notes.py "$V" > /tmp/notes.md \
+              || echo "Lançamento da \`V$V\`." > /tmp/notes.md
+          fi
           gh release create "V$V" "dist/slondo-ptbr_${V}.zip" \
             --title "V$V" --notes-file /tmp/notes.md
 
