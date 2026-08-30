@@ -106,18 +106,20 @@ jobs:
           (github.event_name != 'workflow_dispatch' ||
            github.event.inputs.publish_portal == 'true')
         env:
-          # aceita o token como secret (preferido) ou como variable, sob os
-          # nomes FACTORIO_TOKEN ou FACTORIO_PORTAL_API_KEY.
-          TOK_S1: ${{ secrets.FACTORIO_TOKEN }}
-          TOK_S2: ${{ secrets.FACTORIO_PORTAL_API_KEY }}
-          TOK_V1: ${{ vars.FACTORIO_TOKEN }}
-          TOK_V2: ${{ vars.FACTORIO_PORTAL_API_KEY }}
+          # aceita o token sob qualquer um destes nomes, como secret ou como
+          # variable: FACTORIO_API_KEY / FACTORIO_TOKEN / FACTORIO_PORTAL_API_KEY.
+          TOK_S1: ${{ secrets.FACTORIO_API_KEY }}
+          TOK_S2: ${{ secrets.FACTORIO_TOKEN }}
+          TOK_S3: ${{ secrets.FACTORIO_PORTAL_API_KEY }}
+          TOK_V1: ${{ vars.FACTORIO_API_KEY }}
+          TOK_V2: ${{ vars.FACTORIO_TOKEN }}
+          TOK_V3: ${{ vars.FACTORIO_PORTAL_API_KEY }}
           FACTORIO_PORTAL_INIT_URL: ${{ vars.FACTORIO_PORTAL_INIT_URL }}
           V: ${{ steps.ver.outputs.version }}
         run: |
-          export FACTORIO_PORTAL_API_KEY="${TOK_S1:-${TOK_S2:-${TOK_V1:-${TOK_V2:-}}}}"
+          export FACTORIO_PORTAL_API_KEY="${TOK_S1:-${TOK_S2:-${TOK_S3:-${TOK_V1:-${TOK_V2:-${TOK_V3:-}}}}}}"
           if [ -z "$FACTORIO_PORTAL_API_KEY" ]; then
-            echo "::warning::token do portal não encontrado (secret/var FACTORIO_TOKEN ou FACTORIO_PORTAL_API_KEY); upload pulado."
+            echo "::warning::token do portal não encontrado em odnols/Traducoes-PT-BR (secret/var FACTORIO_API_KEY / FACTORIO_TOKEN / FACTORIO_PORTAL_API_KEY); upload pulado."
             exit 0
           fi
           echo "token do portal presente (${#FACTORIO_PORTAL_API_KEY} chars)."
