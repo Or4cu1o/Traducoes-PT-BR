@@ -316,7 +316,7 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Achievement | Conquista | |
 | Surface | Superfície | |
 | Tile | Bloco | revisar |
-| Roboport | Roboport | Não traduzir |
+| Roboport | Roboporto | ver §5.7 |
 
 ## 6. Termos a **não** traduzir
 
