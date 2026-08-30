@@ -73,14 +73,14 @@ jobs:
           V: ${{ steps.ver.outputs.version }}
         run: |
           set -euo pipefail
-          if gh release view "v$V" >/dev/null 2>&1; then
-            echo "::warning::release v$V já existe; pulando criação."
+          if gh release view "V$V" >/dev/null 2>&1; then
+            echo "::warning::release V$V já existe; pulando criação."
             exit 0
           fi
-          python3 tools/changelog_extract.py "$V" > /tmp/notes.md \
-            || echo "Release $V." > /tmp/notes.md
-          gh release create "v$V" "dist/slondo-ptbr_${V}.zip" \
-            --title "v$V" --notes-file /tmp/notes.md
+          python3 tools/release_notes.py "$V" > /tmp/notes.md \
+            || echo "Lançamento da \`V$V\`." > /tmp/notes.md
+          gh release create "V$V" "dist/slondo-ptbr_${V}.zip" \
+            --title "V$V" --notes-file /tmp/notes.md
 
       - name: Portal do Factorio
         if: steps.ver.outputs.changed == 'true'
