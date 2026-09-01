@@ -61,9 +61,8 @@ com espaço **entre** dois marcadores é legítimo.
 
 ## 3. Fluxo de contribuição
 
-1. **Com acesso de escrita:** trabalhe direto na `main`. **Sem acesso:** faça um
-   _fork_ e um _branch_ descritivo (`traducao/<mod>`, `correcao/<mod>`) e abra um
-   _Pull Request_.
+1. faça um _fork_ e um _branch_ descritivo (`traducao/<mod>`, `correcao/<mod>`)
+   e abra um _Pull Request_.
 2. Rode a validação local **completa** antes de commitar (ou o comando
    `/validar` no Claude Code):
    ```bash
