@@ -250,8 +250,8 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Legendary | Lendário | |
 | Spoilage | Deterioração | |
 | to spoil | deteriorar | |
-| Freshness | Frescor | revisar |
-| Pentapod | Pentapod | |
+| Freshness | Frescor | |
+| Pentapod | Pentapod | não traduzir |
 | Rocket Turret | Torre de foguetes | |
 | Railgun | Canhão elétrico | |
 | Tesla Turret | Torre Tesla | |
@@ -330,7 +330,7 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Achievement | Conquista | |
 | Surface | Superfície | |
 | Tile | Bloco | |
-| Roboport | Roboport | |
+| Roboport | Roboport | não traduzir |
 
 ## 6. Termos a **não** traduzir
 
