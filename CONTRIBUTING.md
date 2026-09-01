@@ -307,7 +307,7 @@ Base: Factorio 2.0 _vanilla_ (pt-BR) + expansão _Space Age_. Coluna **Nota**:
 | Space Science Pack | Pacote científico espacial | |
 | Metallurgic Science Pack | Pacote científico de metalurgia | |
 | Electromagnetic Science Pack | Pacote científico de eletromagnetismo | |
-| Agricultural Science Pack | Pacote científico agricultura | |
+| Agricultural Science Pack | Pacote científico de agricultura | |
 | Cryogenic Science Pack | Pacote científico de criogenia | |
 | Promethium Science Pack | Pacote científico de Prometheus | |
 
